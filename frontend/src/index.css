@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Leaflet map height fix */
+.leaflet-container {
+  height: 100%;
+  width: 100%;
+  border-radius: 0.5rem;
+}
+
+/* Risk severity colors */
+.risk-critical { @apply bg-red-100 text-red-800 border-red-300; }
+.risk-high     { @apply bg-orange-100 text-orange-800 border-orange-300; }
+.risk-medium   { @apply bg-yellow-100 text-yellow-800 border-yellow-300; }
+.risk-low      { @apply bg-green-100 text-green-800 border-green-300; }
+
+/* Fill rate color */
+.fill-critical { @apply text-red-600 font-bold; }
+.fill-warning  { @apply text-orange-500 font-semibold; }
+.fill-ok       { @apply text-green-600; }
