@@ -1,0 +1,6 @@
+entity_type,entity_id,name,category,gpx_ref,start_node_id,end_node_id,capacity,total_capacity,usable_capacity,expected_travel_time_seconds,length_meters,is_walkable,is_driveable
+gate,survey-gate-1,Survey Gate 1,,gate-wpt,,,15,,,,,,
+parking_lot,survey-lot-1,Survey Lot 1,,lot-wpt,,,,25,22,,,,
+destination,survey-dest-1,Survey Destination 1,academic_block,dest-wpt,,,,,,,,,
+road,survey-road-1,Survey Gate to Lot,,gate-to-lot-track,survey-gate-1,survey-lot-1,,,,95,,true,true
+road,survey-road-2,Survey Lot to Destination,,lot-to-dest-track,survey-lot-1,survey-dest-1,,,,60,,true,false

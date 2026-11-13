@@ -1,0 +1,1128 @@
+{
+ "_note": "Pre-calibration routing data (commit b68a1b7). Must stay identical: seeded experiments draw destinations from this set and route on these weights.",
+ "roads": {
+  "vitap-road-main-gate-to-overflow": {
+   "start": "vitap-gate-main",
+   "end": "vitap-lot-overflow",
+   "length_meters": 220,
+   "expected_travel_time_seconds": 44,
+   "is_walkable": true,
+   "is_driveable": true,
+   "status": "open"
+  },
+  "vitap-road-main-gate-to-admin-lot": {
+   "start": "vitap-gate-main",
+   "end": "vitap-lot-admin-visitor",
+   "length_meters": 480,
+   "expected_travel_time_seconds": 96,
+   "is_walkable": true,
+   "is_driveable": true,
+   "status": "open"
+  },
+  "vitap-road-main-gate-to-academic-lot": {
+   "start": "vitap-gate-main",
+   "end": "vitap-lot-academic-main",
+   "length_meters": 620,
+   "expected_travel_time_seconds": 124,
+   "is_walkable": true,
+   "is_driveable": true,
+   "status": "open"
+  },
+  "vitap-road-main-gate-to-hostel-lot": {
+   "start": "vitap-gate-main",
+   "end": "vitap-lot-hostel",
+   "length_meters": 720,
+   "expected_travel_time_seconds": 144,
+   "is_walkable": true,
+   "is_driveable": true,
+   "status": "open"
+  },
+  "vitap-road-main-gate-to-sports-lot": {
+   "start": "vitap-gate-main",
+   "end": "vitap-lot-sports",
+   "length_meters": 870,
+   "expected_travel_time_seconds": 174,
+   "is_walkable": true,
+   "is_driveable": true,
+   "status": "open"
+  },
+  "vitap-road-visitor-gate-to-academic-lot": {
+   "start": "vitap-gate-visitor",
+   "end": "vitap-lot-academic-main",
+   "length_meters": 130,
+   "expected_travel_time_seconds": 26,
+   "is_walkable": true,
+   "is_driveable": true,
+   "status": "open"
+  },
+  "vitap-road-visitor-gate-to-admin-lot": {
+   "start": "vitap-gate-visitor",
+   "end": "vitap-lot-admin-visitor",
+   "length_meters": 280,
+   "expected_travel_time_seconds": 56,
+   "is_walkable": true,
+   "is_driveable": true,
+   "status": "open"
+  },
+  "vitap-road-visitor-gate-to-hostel-lot": {
+   "start": "vitap-gate-visitor",
+   "end": "vitap-lot-hostel",
+   "length_meters": 320,
+   "expected_travel_time_seconds": 64,
+   "is_walkable": true,
+   "is_driveable": true,
+   "status": "open"
+  },
+  "vitap-road-visitor-gate-to-overflow": {
+   "start": "vitap-gate-visitor",
+   "end": "vitap-lot-overflow",
+   "length_meters": 420,
+   "expected_travel_time_seconds": 84,
+   "is_walkable": true,
+   "is_driveable": true,
+   "status": "open"
+  },
+  "vitap-road-overflow-to-ab1": {
+   "start": "vitap-lot-overflow",
+   "end": "vitap-osm-1485919486",
+   "length_meters": 110,
+   "expected_travel_time_seconds": 88,
+   "is_walkable": true,
+   "is_driveable": false,
+   "status": "open"
+  },
+  "vitap-road-overflow-to-ab2": {
+   "start": "vitap-lot-overflow",
+   "end": "vitap-osm-750542242",
+   "length_meters": 220,
+   "expected_travel_time_seconds": 176,
+   "is_walkable": true,
+   "is_driveable": false,
+   "status": "open"
+  },
+  "vitap-road-admin-lot-to-ab1": {
+   "start": "vitap-lot-admin-visitor",
+   "end": "vitap-osm-1485919486",
+   "length_meters": 130,
+   "expected_travel_time_seconds": 104,
+   "is_walkable": true,
+   "is_driveable": false,
+   "status": "open"
+  },
+  "vitap-road-admin-lot-to-cb": {
+   "start": "vitap-lot-admin-visitor",
+   "end": "vitap-osm-1255690439",
+   "length_meters": 200,
+   "expected_travel_time_seconds": 160,
+   "is_walkable": true,
+   "is_driveable": false,
+   "status": "open"
+  },
+  "vitap-road-admin-lot-to-library": {
+   "start": "vitap-lot-admin-visitor",
+   "end": "vitap-lib-001",
+   "length_meters": 180,
+   "expected_travel_time_seconds": 144,
+   "is_walkable": true,
+   "is_driveable": false,
+   "status": "open"
+  },
+  "vitap-road-admin-lot-to-mh1": {
+   "start": "vitap-lot-admin-visitor",
+   "end": "vitap-osm-1434460208",
+   "length_meters": 140,
+   "expected_travel_time_seconds": 112,
+   "is_walkable": true,
+   "is_driveable": false,
+   "status": "open"
+  },
+  "vitap-road-academic-lot-to-ab1": {
+   "start": "vitap-lot-academic-main",
+   "end": "vitap-osm-1485919486",
+   "length_meters": 200,
+   "expected_travel_time_seconds": 160,
+   "is_walkable": true,
+   "is_driveable": false,
+   "status": "open"
+  },
+  "vitap-road-academic-lot-to-ab2": {
+   "start": "vitap-lot-academic-main",
+   "end": "vitap-osm-750542242",
+   "length_meters": 310,
+   "expected_travel_time_seconds": 248,
+   "is_walkable": true,
+   "is_driveable": false,
+   "status": "open"
+  },
+  "vitap-road-academic-lot-to-ap2": {
+   "start": "vitap-lot-academic-main",
+   "end": "vitap-osm-ap2-001",
+   "length_meters": 380,
+   "expected_travel_time_seconds": 304,
+   "is_walkable": true,
+   "is_driveable": false,
+   "status": "open"
+  },
+  "vitap-road-academic-lot-to-cb": {
+   "start": "vitap-lot-academic-main",
+   "end": "vitap-osm-1255690439",
+   "length_meters": 175,
+   "expected_travel_time_seconds": 140,
+   "is_walkable": true,
+   "is_driveable": false,
+   "status": "open"
+  },
+  "vitap-road-academic-lot-to-library": {
+   "start": "vitap-lot-academic-main",
+   "end": "vitap-lib-001",
+   "length_meters": 140,
+   "expected_travel_time_seconds": 112,
+   "is_walkable": true,
+   "is_driveable": false,
+   "status": "open"
+  },
+  "vitap-road-academic-lot-to-sports": {
+   "start": "vitap-lot-academic-main",
+   "end": "vitap-gym-001",
+   "length_meters": 360,
+   "expected_travel_time_seconds": 288,
+   "is_walkable": true,
+   "is_driveable": false,
+   "status": "open"
+  },
+  "vitap-road-academic-lot-to-mh1": {
+   "start": "vitap-lot-academic-main",
+   "end": "vitap-osm-1434460208",
+   "length_meters": 50,
+   "expected_travel_time_seconds": 40,
+   "is_walkable": true,
+   "is_driveable": false,
+   "status": "open"
+  },
+  "vitap-road-sports-lot-to-sports": {
+   "start": "vitap-lot-sports",
+   "end": "vitap-gym-001",
+   "length_meters": 280,
+   "expected_travel_time_seconds": 224,
+   "is_walkable": true,
+   "is_driveable": false,
+   "status": "open"
+  },
+  "vitap-road-sports-lot-to-ab2": {
+   "start": "vitap-lot-sports",
+   "end": "vitap-osm-750542242",
+   "length_meters": 420,
+   "expected_travel_time_seconds": 336,
+   "is_walkable": true,
+   "is_driveable": false,
+   "status": "open"
+  },
+  "vitap-road-sports-lot-to-ap2": {
+   "start": "vitap-lot-sports",
+   "end": "vitap-osm-ap2-001",
+   "length_meters": 380,
+   "expected_travel_time_seconds": 304,
+   "is_walkable": true,
+   "is_driveable": false,
+   "status": "open"
+  },
+  "vitap-road-sports-lot-to-lh1": {
+   "start": "vitap-lot-sports",
+   "end": "vitap-osm-1485935405",
+   "length_meters": 180,
+   "expected_travel_time_seconds": 144,
+   "is_walkable": true,
+   "is_driveable": false,
+   "status": "open"
+  },
+  "vitap-road-sports-lot-to-lh2": {
+   "start": "vitap-lot-sports",
+   "end": "vitap-osm-lh2-001",
+   "length_meters": 250,
+   "expected_travel_time_seconds": 200,
+   "is_walkable": true,
+   "is_driveable": false,
+   "status": "open"
+  },
+  "vitap-road-hostel-lot-to-mh1": {
+   "start": "vitap-lot-hostel",
+   "end": "vitap-osm-1434460208",
+   "length_meters": 200,
+   "expected_travel_time_seconds": 160,
+   "is_walkable": true,
+   "is_driveable": false,
+   "status": "open"
+  },
+  "vitap-road-hostel-lot-to-mh5": {
+   "start": "vitap-lot-hostel",
+   "end": "vitap-osm-mh5-001",
+   "length_meters": 175,
+   "expected_travel_time_seconds": 140,
+   "is_walkable": true,
+   "is_driveable": false,
+   "status": "open"
+  },
+  "vitap-road-hostel-lot-to-mh2-food": {
+   "start": "vitap-lot-hostel",
+   "end": "vitap-osm-1434908865",
+   "length_meters": 110,
+   "expected_travel_time_seconds": 88,
+   "is_walkable": true,
+   "is_driveable": false,
+   "status": "open"
+  },
+  "vitap-road-hostel-lot-to-mh2": {
+   "start": "vitap-lot-hostel",
+   "end": "vitap-osm-1434460210",
+   "length_meters": 95,
+   "expected_travel_time_seconds": 76,
+   "is_walkable": true,
+   "is_driveable": false,
+   "status": "open"
+  },
+  "vitap-road-hostel-lot-to-mh7": {
+   "start": "vitap-lot-hostel",
+   "end": "vitap-osm-1485935404",
+   "length_meters": 80,
+   "expected_travel_time_seconds": 64,
+   "is_walkable": true,
+   "is_driveable": false,
+   "status": "open"
+  },
+  "vitap-road-hostel-lot-to-mh3": {
+   "start": "vitap-lot-hostel",
+   "end": "vitap-osm-1434460214",
+   "length_meters": 150,
+   "expected_travel_time_seconds": 120,
+   "is_walkable": true,
+   "is_driveable": false,
+   "status": "open"
+  },
+  "vitap-road-hostel-lot-to-mh4": {
+   "start": "vitap-lot-hostel",
+   "end": "vitap-osm-mh4-001",
+   "length_meters": 210,
+   "expected_travel_time_seconds": 168,
+   "is_walkable": true,
+   "is_driveable": false,
+   "status": "open"
+  },
+  "vitap-road-hostel-lot-to-mh6": {
+   "start": "vitap-lot-hostel",
+   "end": "vitap-osm-1434890457",
+   "length_meters": 175,
+   "expected_travel_time_seconds": 140,
+   "is_walkable": true,
+   "is_driveable": false,
+   "status": "open"
+  },
+  "vitap-road-hostel-lot-to-food-street": {
+   "start": "vitap-lot-hostel",
+   "end": "vitap-osm-1321555307",
+   "length_meters": 230,
+   "expected_travel_time_seconds": 184,
+   "is_walkable": true,
+   "is_driveable": false,
+   "status": "open"
+  },
+  "vitap-road-hostel-lot-to-lh1": {
+   "start": "vitap-lot-hostel",
+   "end": "vitap-osm-1485935405",
+   "length_meters": 580,
+   "expected_travel_time_seconds": 464,
+   "is_walkable": true,
+   "is_driveable": false,
+   "status": "open"
+  },
+  "vitap-road-hostel-lot-to-lh2": {
+   "start": "vitap-lot-hostel",
+   "end": "vitap-osm-lh2-001",
+   "length_meters": 640,
+   "expected_travel_time_seconds": 512,
+   "is_walkable": true,
+   "is_driveable": false,
+   "status": "open"
+  }
+ },
+ "edges": [
+  {
+   "from_node_id": "vitap-gate-main",
+   "to_node_id": "vitap-lot-overflow",
+   "road_id": "vitap-road-main-gate-to-overflow",
+   "weight_time_seconds": 44,
+   "weight_distance_meters": 220,
+   "is_walkable": true,
+   "is_driveable": true,
+   "status": "open"
+  },
+  {
+   "from_node_id": "vitap-lot-overflow",
+   "to_node_id": "vitap-gate-main",
+   "road_id": "vitap-road-main-gate-to-overflow",
+   "weight_time_seconds": 44,
+   "weight_distance_meters": 220,
+   "is_walkable": true,
+   "is_driveable": true,
+   "status": "open"
+  },
+  {
+   "from_node_id": "vitap-gate-main",
+   "to_node_id": "vitap-lot-admin-visitor",
+   "road_id": "vitap-road-main-gate-to-admin-lot",
+   "weight_time_seconds": 96,
+   "weight_distance_meters": 480,
+   "is_walkable": true,
+   "is_driveable": true,
+   "status": "open"
+  },
+  {
+   "from_node_id": "vitap-lot-admin-visitor",
+   "to_node_id": "vitap-gate-main",
+   "road_id": "vitap-road-main-gate-to-admin-lot",
+   "weight_time_seconds": 96,
+   "weight_distance_meters": 480,
+   "is_walkable": true,
+   "is_driveable": true,
+   "status": "open"
+  },
+  {
+   "from_node_id": "vitap-gate-main",
+   "to_node_id": "vitap-lot-academic-main",
+   "road_id": "vitap-road-main-gate-to-academic-lot",
+   "weight_time_seconds": 124,
+   "weight_distance_meters": 620,
+   "is_walkable": true,
+   "is_driveable": true,
+   "status": "open"
+  },
+  {
+   "from_node_id": "vitap-lot-academic-main",
+   "to_node_id": "vitap-gate-main",
+   "road_id": "vitap-road-main-gate-to-academic-lot",
+   "weight_time_seconds": 124,
+   "weight_distance_meters": 620,
+   "is_walkable": true,
+   "is_driveable": true,
+   "status": "open"
+  },
+  {
+   "from_node_id": "vitap-gate-main",
+   "to_node_id": "vitap-lot-hostel",
+   "road_id": "vitap-road-main-gate-to-hostel-lot",
+   "weight_time_seconds": 144,
+   "weight_distance_meters": 720,
+   "is_walkable": true,
+   "is_driveable": true,
+   "status": "open"
+  },
+  {
+   "from_node_id": "vitap-lot-hostel",
+   "to_node_id": "vitap-gate-main",
+   "road_id": "vitap-road-main-gate-to-hostel-lot",
+   "weight_time_seconds": 144,
+   "weight_distance_meters": 720,
+   "is_walkable": true,
+   "is_driveable": true,
+   "status": "open"
+  },
+  {
+   "from_node_id": "vitap-gate-main",
+   "to_node_id": "vitap-lot-sports",
+   "road_id": "vitap-road-main-gate-to-sports-lot",
+   "weight_time_seconds": 174,
+   "weight_distance_meters": 870,
+   "is_walkable": true,
+   "is_driveable": true,
+   "status": "open"
+  },
+  {
+   "from_node_id": "vitap-lot-sports",
+   "to_node_id": "vitap-gate-main",
+   "road_id": "vitap-road-main-gate-to-sports-lot",
+   "weight_time_seconds": 174,
+   "weight_distance_meters": 870,
+   "is_walkable": true,
+   "is_driveable": true,
+   "status": "open"
+  },
+  {
+   "from_node_id": "vitap-gate-visitor",
+   "to_node_id": "vitap-lot-academic-main",
+   "road_id": "vitap-road-visitor-gate-to-academic-lot",
+   "weight_time_seconds": 26,
+   "weight_distance_meters": 130,
+   "is_walkable": true,
+   "is_driveable": true,
+   "status": "open"
+  },
+  {
+   "from_node_id": "vitap-lot-academic-main",
+   "to_node_id": "vitap-gate-visitor",
+   "road_id": "vitap-road-visitor-gate-to-academic-lot",
+   "weight_time_seconds": 26,
+   "weight_distance_meters": 130,
+   "is_walkable": true,
+   "is_driveable": true,
+   "status": "open"
+  },
+  {
+   "from_node_id": "vitap-gate-visitor",
+   "to_node_id": "vitap-lot-admin-visitor",
+   "road_id": "vitap-road-visitor-gate-to-admin-lot",
+   "weight_time_seconds": 56,
+   "weight_distance_meters": 280,
+   "is_walkable": true,
+   "is_driveable": true,
+   "status": "open"
+  },
+  {
+   "from_node_id": "vitap-lot-admin-visitor",
+   "to_node_id": "vitap-gate-visitor",
+   "road_id": "vitap-road-visitor-gate-to-admin-lot",
+   "weight_time_seconds": 56,
+   "weight_distance_meters": 280,
+   "is_walkable": true,
+   "is_driveable": true,
+   "status": "open"
+  },
+  {
+   "from_node_id": "vitap-gate-visitor",
+   "to_node_id": "vitap-lot-hostel",
+   "road_id": "vitap-road-visitor-gate-to-hostel-lot",
+   "weight_time_seconds": 64,
+   "weight_distance_meters": 320,
+   "is_walkable": true,
+   "is_driveable": true,
+   "status": "open"
+  },
+  {
+   "from_node_id": "vitap-lot-hostel",
+   "to_node_id": "vitap-gate-visitor",
+   "road_id": "vitap-road-visitor-gate-to-hostel-lot",
+   "weight_time_seconds": 64,
+   "weight_distance_meters": 320,
+   "is_walkable": true,
+   "is_driveable": true,
+   "status": "open"
+  },
+  {
+   "from_node_id": "vitap-gate-visitor",
+   "to_node_id": "vitap-lot-overflow",
+   "road_id": "vitap-road-visitor-gate-to-overflow",
+   "weight_time_seconds": 84,
+   "weight_distance_meters": 420,
+   "is_walkable": true,
+   "is_driveable": true,
+   "status": "open"
+  },
+  {
+   "from_node_id": "vitap-lot-overflow",
+   "to_node_id": "vitap-gate-visitor",
+   "road_id": "vitap-road-visitor-gate-to-overflow",
+   "weight_time_seconds": 84,
+   "weight_distance_meters": 420,
+   "is_walkable": true,
+   "is_driveable": true,
+   "status": "open"
+  },
+  {
+   "from_node_id": "vitap-lot-overflow",
+   "to_node_id": "vitap-osm-1485919486",
+   "road_id": "vitap-road-overflow-to-ab1",
+   "weight_time_seconds": 88,
+   "weight_distance_meters": 110,
+   "is_walkable": true,
+   "is_driveable": false,
+   "status": "open"
+  },
+  {
+   "from_node_id": "vitap-osm-1485919486",
+   "to_node_id": "vitap-lot-overflow",
+   "road_id": "vitap-road-overflow-to-ab1",
+   "weight_time_seconds": 88,
+   "weight_distance_meters": 110,
+   "is_walkable": true,
+   "is_driveable": false,
+   "status": "open"
+  },
+  {
+   "from_node_id": "vitap-lot-overflow",
+   "to_node_id": "vitap-osm-750542242",
+   "road_id": "vitap-road-overflow-to-ab2",
+   "weight_time_seconds": 176,
+   "weight_distance_meters": 220,
+   "is_walkable": true,
+   "is_driveable": false,
+   "status": "open"
+  },
+  {
+   "from_node_id": "vitap-osm-750542242",
+   "to_node_id": "vitap-lot-overflow",
+   "road_id": "vitap-road-overflow-to-ab2",
+   "weight_time_seconds": 176,
+   "weight_distance_meters": 220,
+   "is_walkable": true,
+   "is_driveable": false,
+   "status": "open"
+  },
+  {
+   "from_node_id": "vitap-lot-admin-visitor",
+   "to_node_id": "vitap-osm-1485919486",
+   "road_id": "vitap-road-admin-lot-to-ab1",
+   "weight_time_seconds": 104,
+   "weight_distance_meters": 130,
+   "is_walkable": true,
+   "is_driveable": false,
+   "status": "open"
+  },
+  {
+   "from_node_id": "vitap-osm-1485919486",
+   "to_node_id": "vitap-lot-admin-visitor",
+   "road_id": "vitap-road-admin-lot-to-ab1",
+   "weight_time_seconds": 104,
+   "weight_distance_meters": 130,
+   "is_walkable": true,
+   "is_driveable": false,
+   "status": "open"
+  },
+  {
+   "from_node_id": "vitap-lot-admin-visitor",
+   "to_node_id": "vitap-osm-1255690439",
+   "road_id": "vitap-road-admin-lot-to-cb",
+   "weight_time_seconds": 160,
+   "weight_distance_meters": 200,
+   "is_walkable": true,
+   "is_driveable": false,
+   "status": "open"
+  },
+  {
+   "from_node_id": "vitap-osm-1255690439",
+   "to_node_id": "vitap-lot-admin-visitor",
+   "road_id": "vitap-road-admin-lot-to-cb",
+   "weight_time_seconds": 160,
+   "weight_distance_meters": 200,
+   "is_walkable": true,
+   "is_driveable": false,
+   "status": "open"
+  },
+  {
+   "from_node_id": "vitap-lot-admin-visitor",
+   "to_node_id": "vitap-lib-001",
+   "road_id": "vitap-road-admin-lot-to-library",
+   "weight_time_seconds": 144,
+   "weight_distance_meters": 180,
+   "is_walkable": true,
+   "is_driveable": false,
+   "status": "open"
+  },
+  {
+   "from_node_id": "vitap-lib-001",
+   "to_node_id": "vitap-lot-admin-visitor",
+   "road_id": "vitap-road-admin-lot-to-library",
+   "weight_time_seconds": 144,
+   "weight_distance_meters": 180,
+   "is_walkable": true,
+   "is_driveable": false,
+   "status": "open"
+  },
+  {
+   "from_node_id": "vitap-lot-admin-visitor",
+   "to_node_id": "vitap-osm-1434460208",
+   "road_id": "vitap-road-admin-lot-to-mh1",
+   "weight_time_seconds": 112,
+   "weight_distance_meters": 140,
+   "is_walkable": true,
+   "is_driveable": false,
+   "status": "open"
+  },
+  {
+   "from_node_id": "vitap-osm-1434460208",
+   "to_node_id": "vitap-lot-admin-visitor",
+   "road_id": "vitap-road-admin-lot-to-mh1",
+   "weight_time_seconds": 112,
+   "weight_distance_meters": 140,
+   "is_walkable": true,
+   "is_driveable": false,
+   "status": "open"
+  },
+  {
+   "from_node_id": "vitap-lot-academic-main",
+   "to_node_id": "vitap-osm-1485919486",
+   "road_id": "vitap-road-academic-lot-to-ab1",
+   "weight_time_seconds": 160,
+   "weight_distance_meters": 200,
+   "is_walkable": true,
+   "is_driveable": false,
+   "status": "open"
+  },
+  {
+   "from_node_id": "vitap-osm-1485919486",
+   "to_node_id": "vitap-lot-academic-main",
+   "road_id": "vitap-road-academic-lot-to-ab1",
+   "weight_time_seconds": 160,
+   "weight_distance_meters": 200,
+   "is_walkable": true,
+   "is_driveable": false,
+   "status": "open"
+  },
+  {
+   "from_node_id": "vitap-lot-academic-main",
+   "to_node_id": "vitap-osm-750542242",
+   "road_id": "vitap-road-academic-lot-to-ab2",
+   "weight_time_seconds": 248,
+   "weight_distance_meters": 310,
+   "is_walkable": true,
+   "is_driveable": false,
+   "status": "open"
+  },
+  {
+   "from_node_id": "vitap-osm-750542242",
+   "to_node_id": "vitap-lot-academic-main",
+   "road_id": "vitap-road-academic-lot-to-ab2",
+   "weight_time_seconds": 248,
+   "weight_distance_meters": 310,
+   "is_walkable": true,
+   "is_driveable": false,
+   "status": "open"
+  },
+  {
+   "from_node_id": "vitap-lot-academic-main",
+   "to_node_id": "vitap-osm-ap2-001",
+   "road_id": "vitap-road-academic-lot-to-ap2",
+   "weight_time_seconds": 304,
+   "weight_distance_meters": 380,
+   "is_walkable": true,
+   "is_driveable": false,
+   "status": "open"
+  },
+  {
+   "from_node_id": "vitap-osm-ap2-001",
+   "to_node_id": "vitap-lot-academic-main",
+   "road_id": "vitap-road-academic-lot-to-ap2",
+   "weight_time_seconds": 304,
+   "weight_distance_meters": 380,
+   "is_walkable": true,
+   "is_driveable": false,
+   "status": "open"
+  },
+  {
+   "from_node_id": "vitap-lot-academic-main",
+   "to_node_id": "vitap-osm-1255690439",
+   "road_id": "vitap-road-academic-lot-to-cb",
+   "weight_time_seconds": 140,
+   "weight_distance_meters": 175,
+   "is_walkable": true,
+   "is_driveable": false,
+   "status": "open"
+  },
+  {
+   "from_node_id": "vitap-osm-1255690439",
+   "to_node_id": "vitap-lot-academic-main",
+   "road_id": "vitap-road-academic-lot-to-cb",
+   "weight_time_seconds": 140,
+   "weight_distance_meters": 175,
+   "is_walkable": true,
+   "is_driveable": false,
+   "status": "open"
+  },
+  {
+   "from_node_id": "vitap-lot-academic-main",
+   "to_node_id": "vitap-lib-001",
+   "road_id": "vitap-road-academic-lot-to-library",
+   "weight_time_seconds": 112,
+   "weight_distance_meters": 140,
+   "is_walkable": true,
+   "is_driveable": false,
+   "status": "open"
+  },
+  {
+   "from_node_id": "vitap-lib-001",
+   "to_node_id": "vitap-lot-academic-main",
+   "road_id": "vitap-road-academic-lot-to-library",
+   "weight_time_seconds": 112,
+   "weight_distance_meters": 140,
+   "is_walkable": true,
+   "is_driveable": false,
+   "status": "open"
+  },
+  {
+   "from_node_id": "vitap-lot-academic-main",
+   "to_node_id": "vitap-gym-001",
+   "road_id": "vitap-road-academic-lot-to-sports",
+   "weight_time_seconds": 288,
+   "weight_distance_meters": 360,
+   "is_walkable": true,
+   "is_driveable": false,
+   "status": "open"
+  },
+  {
+   "from_node_id": "vitap-gym-001",
+   "to_node_id": "vitap-lot-academic-main",
+   "road_id": "vitap-road-academic-lot-to-sports",
+   "weight_time_seconds": 288,
+   "weight_distance_meters": 360,
+   "is_walkable": true,
+   "is_driveable": false,
+   "status": "open"
+  },
+  {
+   "from_node_id": "vitap-lot-academic-main",
+   "to_node_id": "vitap-osm-1434460208",
+   "road_id": "vitap-road-academic-lot-to-mh1",
+   "weight_time_seconds": 40,
+   "weight_distance_meters": 50,
+   "is_walkable": true,
+   "is_driveable": false,
+   "status": "open"
+  },
+  {
+   "from_node_id": "vitap-osm-1434460208",
+   "to_node_id": "vitap-lot-academic-main",
+   "road_id": "vitap-road-academic-lot-to-mh1",
+   "weight_time_seconds": 40,
+   "weight_distance_meters": 50,
+   "is_walkable": true,
+   "is_driveable": false,
+   "status": "open"
+  },
+  {
+   "from_node_id": "vitap-lot-sports",
+   "to_node_id": "vitap-gym-001",
+   "road_id": "vitap-road-sports-lot-to-sports",
+   "weight_time_seconds": 224,
+   "weight_distance_meters": 280,
+   "is_walkable": true,
+   "is_driveable": false,
+   "status": "open"
+  },
+  {
+   "from_node_id": "vitap-gym-001",
+   "to_node_id": "vitap-lot-sports",
+   "road_id": "vitap-road-sports-lot-to-sports",
+   "weight_time_seconds": 224,
+   "weight_distance_meters": 280,
+   "is_walkable": true,
+   "is_driveable": false,
+   "status": "open"
+  },
+  {
+   "from_node_id": "vitap-lot-sports",
+   "to_node_id": "vitap-osm-750542242",
+   "road_id": "vitap-road-sports-lot-to-ab2",
+   "weight_time_seconds": 336,
+   "weight_distance_meters": 420,
+   "is_walkable": true,
+   "is_driveable": false,
+   "status": "open"
+  },
+  {
+   "from_node_id": "vitap-osm-750542242",
+   "to_node_id": "vitap-lot-sports",
+   "road_id": "vitap-road-sports-lot-to-ab2",
+   "weight_time_seconds": 336,
+   "weight_distance_meters": 420,
+   "is_walkable": true,
+   "is_driveable": false,
+   "status": "open"
+  },
+  {
+   "from_node_id": "vitap-lot-sports",
+   "to_node_id": "vitap-osm-ap2-001",
+   "road_id": "vitap-road-sports-lot-to-ap2",
+   "weight_time_seconds": 304,
+   "weight_distance_meters": 380,
+   "is_walkable": true,
+   "is_driveable": false,
+   "status": "open"
+  },
+  {
+   "from_node_id": "vitap-osm-ap2-001",
+   "to_node_id": "vitap-lot-sports",
+   "road_id": "vitap-road-sports-lot-to-ap2",
+   "weight_time_seconds": 304,
+   "weight_distance_meters": 380,
+   "is_walkable": true,
+   "is_driveable": false,
+   "status": "open"
+  },
+  {
+   "from_node_id": "vitap-lot-sports",
+   "to_node_id": "vitap-osm-1485935405",
+   "road_id": "vitap-road-sports-lot-to-lh1",
+   "weight_time_seconds": 144,
+   "weight_distance_meters": 180,
+   "is_walkable": true,
+   "is_driveable": false,
+   "status": "open"
+  },
+  {
+   "from_node_id": "vitap-osm-1485935405",
+   "to_node_id": "vitap-lot-sports",
+   "road_id": "vitap-road-sports-lot-to-lh1",
+   "weight_time_seconds": 144,
+   "weight_distance_meters": 180,
+   "is_walkable": true,
+   "is_driveable": false,
+   "status": "open"
+  },
+  {
+   "from_node_id": "vitap-lot-sports",
+   "to_node_id": "vitap-osm-lh2-001",
+   "road_id": "vitap-road-sports-lot-to-lh2",
+   "weight_time_seconds": 200,
+   "weight_distance_meters": 250,
+   "is_walkable": true,
+   "is_driveable": false,
+   "status": "open"
+  },
+  {
+   "from_node_id": "vitap-osm-lh2-001",
+   "to_node_id": "vitap-lot-sports",
+   "road_id": "vitap-road-sports-lot-to-lh2",
+   "weight_time_seconds": 200,
+   "weight_distance_meters": 250,
+   "is_walkable": true,
+   "is_driveable": false,
+   "status": "open"
+  },
+  {
+   "from_node_id": "vitap-lot-hostel",
+   "to_node_id": "vitap-osm-1434460208",
+   "road_id": "vitap-road-hostel-lot-to-mh1",
+   "weight_time_seconds": 160,
+   "weight_distance_meters": 200,
+   "is_walkable": true,
+   "is_driveable": false,
+   "status": "open"
+  },
+  {
+   "from_node_id": "vitap-osm-1434460208",
+   "to_node_id": "vitap-lot-hostel",
+   "road_id": "vitap-road-hostel-lot-to-mh1",
+   "weight_time_seconds": 160,
+   "weight_distance_meters": 200,
+   "is_walkable": true,
+   "is_driveable": false,
+   "status": "open"
+  },
+  {
+   "from_node_id": "vitap-lot-hostel",
+   "to_node_id": "vitap-osm-mh5-001",
+   "road_id": "vitap-road-hostel-lot-to-mh5",
+   "weight_time_seconds": 140,
+   "weight_distance_meters": 175,
+   "is_walkable": true,
+   "is_driveable": false,
+   "status": "open"
+  },
+  {
+   "from_node_id": "vitap-osm-mh5-001",
+   "to_node_id": "vitap-lot-hostel",
+   "road_id": "vitap-road-hostel-lot-to-mh5",
+   "weight_time_seconds": 140,
+   "weight_distance_meters": 175,
+   "is_walkable": true,
+   "is_driveable": false,
+   "status": "open"
+  },
+  {
+   "from_node_id": "vitap-lot-hostel",
+   "to_node_id": "vitap-osm-1434908865",
+   "road_id": "vitap-road-hostel-lot-to-mh2-food",
+   "weight_time_seconds": 88,
+   "weight_distance_meters": 110,
+   "is_walkable": true,
+   "is_driveable": false,
+   "status": "open"
+  },
+  {
+   "from_node_id": "vitap-osm-1434908865",
+   "to_node_id": "vitap-lot-hostel",
+   "road_id": "vitap-road-hostel-lot-to-mh2-food",
+   "weight_time_seconds": 88,
+   "weight_distance_meters": 110,
+   "is_walkable": true,
+   "is_driveable": false,
+   "status": "open"
+  },
+  {
+   "from_node_id": "vitap-lot-hostel",
+   "to_node_id": "vitap-osm-1434460210",
+   "road_id": "vitap-road-hostel-lot-to-mh2",
+   "weight_time_seconds": 76,
+   "weight_distance_meters": 95,
+   "is_walkable": true,
+   "is_driveable": false,
+   "status": "open"
+  },
+  {
+   "from_node_id": "vitap-osm-1434460210",
+   "to_node_id": "vitap-lot-hostel",
+   "road_id": "vitap-road-hostel-lot-to-mh2",
+   "weight_time_seconds": 76,
+   "weight_distance_meters": 95,
+   "is_walkable": true,
+   "is_driveable": false,
+   "status": "open"
+  },
+  {
+   "from_node_id": "vitap-lot-hostel",
+   "to_node_id": "vitap-osm-1485935404",
+   "road_id": "vitap-road-hostel-lot-to-mh7",
+   "weight_time_seconds": 64,
+   "weight_distance_meters": 80,
+   "is_walkable": true,
+   "is_driveable": false,
+   "status": "open"
+  },
+  {
+   "from_node_id": "vitap-osm-1485935404",
+   "to_node_id": "vitap-lot-hostel",
+   "road_id": "vitap-road-hostel-lot-to-mh7",
+   "weight_time_seconds": 64,
+   "weight_distance_meters": 80,
+   "is_walkable": true,
+   "is_driveable": false,
+   "status": "open"
+  },
+  {
+   "from_node_id": "vitap-lot-hostel",
+   "to_node_id": "vitap-osm-1434460214",
+   "road_id": "vitap-road-hostel-lot-to-mh3",
+   "weight_time_seconds": 120,
+   "weight_distance_meters": 150,
+   "is_walkable": true,
+   "is_driveable": false,
+   "status": "open"
+  },
+  {
+   "from_node_id": "vitap-osm-1434460214",
+   "to_node_id": "vitap-lot-hostel",
+   "road_id": "vitap-road-hostel-lot-to-mh3",
+   "weight_time_seconds": 120,
+   "weight_distance_meters": 150,
+   "is_walkable": true,
+   "is_driveable": false,
+   "status": "open"
+  },
+  {
+   "from_node_id": "vitap-lot-hostel",
+   "to_node_id": "vitap-osm-mh4-001",
+   "road_id": "vitap-road-hostel-lot-to-mh4",
+   "weight_time_seconds": 168,
+   "weight_distance_meters": 210,
+   "is_walkable": true,
+   "is_driveable": false,
+   "status": "open"
+  },
+  {
+   "from_node_id": "vitap-osm-mh4-001",
+   "to_node_id": "vitap-lot-hostel",
+   "road_id": "vitap-road-hostel-lot-to-mh4",
+   "weight_time_seconds": 168,
+   "weight_distance_meters": 210,
+   "is_walkable": true,
+   "is_driveable": false,
+   "status": "open"
+  },
+  {
+   "from_node_id": "vitap-lot-hostel",
+   "to_node_id": "vitap-osm-1434890457",
+   "road_id": "vitap-road-hostel-lot-to-mh6",
+   "weight_time_seconds": 140,
+   "weight_distance_meters": 175,
+   "is_walkable": true,
+   "is_driveable": false,
+   "status": "open"
+  },
+  {
+   "from_node_id": "vitap-osm-1434890457",
+   "to_node_id": "vitap-lot-hostel",
+   "road_id": "vitap-road-hostel-lot-to-mh6",
+   "weight_time_seconds": 140,
+   "weight_distance_meters": 175,
+   "is_walkable": true,
+   "is_driveable": false,
+   "status": "open"
+  },
+  {
+   "from_node_id": "vitap-lot-hostel",
+   "to_node_id": "vitap-osm-1321555307",
+   "road_id": "vitap-road-hostel-lot-to-food-street",
+   "weight_time_seconds": 184,
+   "weight_distance_meters": 230,
+   "is_walkable": true,
+   "is_driveable": false,
+   "status": "open"
+  },
+  {
+   "from_node_id": "vitap-osm-1321555307",
+   "to_node_id": "vitap-lot-hostel",
+   "road_id": "vitap-road-hostel-lot-to-food-street",
+   "weight_time_seconds": 184,
+   "weight_distance_meters": 230,
+   "is_walkable": true,
+   "is_driveable": false,
+   "status": "open"
+  },
+  {
+   "from_node_id": "vitap-lot-hostel",
+   "to_node_id": "vitap-osm-1485935405",
+   "road_id": "vitap-road-hostel-lot-to-lh1",
+   "weight_time_seconds": 464,
+   "weight_distance_meters": 580,
+   "is_walkable": true,
+   "is_driveable": false,
+   "status": "open"
+  },
+  {
+   "from_node_id": "vitap-osm-1485935405",
+   "to_node_id": "vitap-lot-hostel",
+   "road_id": "vitap-road-hostel-lot-to-lh1",
+   "weight_time_seconds": 464,
+   "weight_distance_meters": 580,
+   "is_walkable": true,
+   "is_driveable": false,
+   "status": "open"
+  },
+  {
+   "from_node_id": "vitap-lot-hostel",
+   "to_node_id": "vitap-osm-lh2-001",
+   "road_id": "vitap-road-hostel-lot-to-lh2",
+   "weight_time_seconds": 512,
+   "weight_distance_meters": 640,
+   "is_walkable": true,
+   "is_driveable": false,
+   "status": "open"
+  },
+  {
+   "from_node_id": "vitap-osm-lh2-001",
+   "to_node_id": "vitap-lot-hostel",
+   "road_id": "vitap-road-hostel-lot-to-lh2",
+   "weight_time_seconds": 512,
+   "weight_distance_meters": 640,
+   "is_walkable": true,
+   "is_driveable": false,
+   "status": "open"
+  }
+ ],
+ "destination_ids": [
+  "vitap-gym-001",
+  "vitap-lib-001",
+  "vitap-osm-1255690439",
+  "vitap-osm-1321555307",
+  "vitap-osm-1434460208",
+  "vitap-osm-1434460210",
+  "vitap-osm-1434460214",
+  "vitap-osm-1434890457",
+  "vitap-osm-1434908865",
+  "vitap-osm-1485919486",
+  "vitap-osm-1485935404",
+  "vitap-osm-1485935405",
+  "vitap-osm-750542242",
+  "vitap-osm-ap2-001",
+  "vitap-osm-lh2-001",
+  "vitap-osm-mh4-001",
+  "vitap-osm-mh5-001"
+ ]
+}

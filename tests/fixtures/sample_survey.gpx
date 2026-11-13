@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="test-fixture" xmlns="http://www.topografix.com/GPX/1/1">
+  <wpt lat="10.0000" lon="20.0000">
+    <name>gate-wpt</name>
+  </wpt>
+  <wpt lat="10.0010" lon="20.0010">
+    <name>lot-wpt</name>
+  </wpt>
+  <wpt lat="10.0015" lon="20.0020">
+    <name>dest-wpt</name>
+  </wpt>
+  <trk>
+    <name>gate-to-lot-track</name>
+    <trkseg>
+      <trkpt lat="10.0000" lon="20.0000"></trkpt>
+      <trkpt lat="10.0004" lon="20.0003"></trkpt>
+      <trkpt lat="10.0007" lon="20.0007"></trkpt>
+      <trkpt lat="10.0010" lon="20.0010"></trkpt>
+    </trkseg>
+  </trk>
+  <trk>
+    <name>lot-to-dest-track</name>
+    <trkseg>
+      <trkpt lat="10.0010" lon="20.0010"></trkpt>
+      <trkpt lat="10.0013" lon="20.0015"></trkpt>
+      <trkpt lat="10.0015" lon="20.0020"></trkpt>
+    </trkseg>
+  </trk>
+</gpx>
