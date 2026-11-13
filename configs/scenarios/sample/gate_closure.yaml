@@ -1,0 +1,16 @@
+# SYNTHETIC starter scenario.
+scenario_id: sample-gate-closure
+campus_id: sample
+name: GATE_CLOSURE
+duration_minutes: 90
+vehicle_count: 20
+arrival_rate_profile:
+  type: constant
+  rate: 0.22
+event_conditions: null
+availability_overrides:
+  closed_gates: [sample-gate-1]
+  closed_parking_lots: []
+  closed_roads: []
+prediction_error_injection_level: 0.0
+random_seed: 4

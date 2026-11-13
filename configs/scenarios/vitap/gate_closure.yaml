@@ -1,0 +1,23 @@
+# SYNTHETIC scenario: the morning rush with the Visitor Gate closed, so every
+# vehicle must queue at the Main Gate.
+scenario_id: vitap-gate-closure
+campus_id: vitap
+name: GATE_CLOSURE
+description: Morning rush with the visitor gate closed.
+duration_minutes: 120
+vehicle_count: 400
+arrival_rate_profile:
+  type: profile
+  points:
+    - { time: 0, rate: 0.3 }
+    - { time: 30, rate: 1.0 }
+    - { time: 60, rate: 1.0 }
+    - { time: 120, rate: 0.2 }
+event_conditions: null
+availability_overrides:
+  closed_gates: [vitap-gate-visitor]
+  closed_parking_lots: []
+  closed_roads: []
+prediction_error_injection_level: 0.0
+dwell_minutes: { min: 120, max: 420 }
+random_seed: 400

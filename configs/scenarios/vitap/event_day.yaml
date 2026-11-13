@@ -1,0 +1,30 @@
+# SYNTHETIC scenario: Sports Festival day. Uses the real event row
+# event-sports-fest-2026 from data/vitap_events.csv (demand x1.5, sports_zone).
+# During 10:00-18:00 arrivals are 1.5x, and buildings near the sports lot
+# are 1.5x more likely as destinations.
+scenario_id: vitap-event-day
+campus_id: vitap
+name: EVENT_DAY
+description: Sports Festival (x1.5 demand, sports zone) on a normal 08:00-18:00 day.
+duration_minutes: 600
+vehicle_count: 500
+arrival_rate_profile:
+  type: profile
+  points:
+    - { time: 0, rate: 0.6 }
+    - { time: 60, rate: 1.0 }
+    - { time: 180, rate: 0.5 }
+    - { time: 300, rate: 0.6 }
+    - { time: 480, rate: 0.3 }
+    - { time: 600, rate: 0.1 }
+event_conditions:
+  event_id: event-sports-fest-2026
+  start_minute: 120
+  end_minute: 600
+availability_overrides:
+  closed_gates: []
+  closed_parking_lots: []
+  closed_roads: []
+prediction_error_injection_level: 0.0
+dwell_minutes: { min: 60, max: 300 }
+random_seed: 200

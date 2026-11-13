@@ -1,0 +1,28 @@
+# Parking full scenario: demand deliberately exceeds total usable capacity
+scenario_id: vitap-parking-full
+campus_id: vitap
+name: PARKING_FULL
+description: "600 vehicles arrive in 90 min; all lots fill and overflow is measured"
+duration_minutes: 90
+vehicle_count: 600
+start_time_min: 480
+arrival_rate_profile:
+  type: profile
+  points:
+    - { time: 0, rate: 3.0 }
+    - { time: 60, rate: 2.5 }
+    - { time: 90, rate: 0.5 }
+
+event_conditions: null
+availability_overrides:
+  closed_gates: []
+  closed_parking_lots: []
+  closed_roads: []
+
+prediction_error_injection_level: 0.0
+random_seed: 99
+warmdown_minutes: 30
+use_prediction: true
+use_optimization: true
+use_uncertainty: true
+proactive: true

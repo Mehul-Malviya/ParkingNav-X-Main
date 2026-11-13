@@ -1,0 +1,37 @@
+# E5: Robustness — 20% forecast noise (sigma=0.20)
+# Same base as E1 (600-min, 400-vehicle, E1 profile); only noise level differs.
+# NOTE: B1/B2 results identical to E5_noise_0; noise affects optimizer only (Member 3).
+scenario_id: vitap-e5-noise-20
+campus_id: vitap
+name: ROBUSTNESS_20PCT_NOISE
+description: "Normal day with 20% forecast error injection (sigma=0.20)"
+duration_minutes: 600
+vehicle_count: 400
+start_time_min: 480
+
+arrival_rate_profile:
+  type: profile
+  points:
+    - { time: 0,   rate: 0.3 }
+    - { time: 60,  rate: 1.2 }
+    - { time: 120, rate: 0.8 }
+    - { time: 240, rate: 0.6 }
+    - { time: 360, rate: 0.9 }
+    - { time: 480, rate: 0.4 }
+    - { time: 540, rate: 0.2 }
+    - { time: 600, rate: 0.1 }
+
+event_conditions: null
+availability_overrides:
+  closed_gates: []
+  closed_parking_lots: []
+  closed_roads: []
+
+prediction_error_injection_level: 0.20
+random_seed: 52
+warmdown_minutes: 30
+
+use_prediction: true
+use_optimization: true
+use_uncertainty: true
+proactive: true

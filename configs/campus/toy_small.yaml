@@ -1,0 +1,47 @@
+campus:
+  id: toy_small
+  name: Toy Small Campus
+  time_step_sec: 10
+  nodes:
+    - {id: G1, type: gate,          lat: 0.0,  lon: 0.0,  name: Gate North}
+    - {id: G2, type: gate,          lat: 0.1,  lon: 0.0,  name: Gate South}
+    - {id: G3, type: gate,          lat: 0.0,  lon: 0.1,  name: Gate East}
+    - {id: J1, type: junction,      lat: 0.05, lon: 0.05, name: Central Junction}
+    - {id: P1_IN, type: lot_entrance, lat: 0.04, lon: 0.04, name: Lot A Entrance}
+    - {id: P2_IN, type: lot_entrance, lat: 0.06, lon: 0.04, name: Lot B Entrance}
+    - {id: P3_IN, type: lot_entrance, lat: 0.05, lon: 0.06, name: Lot C Entrance}
+  gates:
+    - {id: G1, node: G1, service_rate_vph: 120, lanes: 1, status: open}
+    - {id: G2, node: G2, service_rate_vph: 120, lanes: 1, status: open}
+    - {id: G3, node: G3, service_rate_vph: 120, lanes: 1, status: open}
+  roads:
+    - {id: R1,  from: G1,    to: J1,    length_m: 100, free_speed_kmph: 20, capacity_vph: 200, status: open}
+    - {id: R2,  from: G2,    to: J1,    length_m: 100, free_speed_kmph: 20, capacity_vph: 200, status: open}
+    - {id: R3,  from: G3,    to: J1,    length_m: 100, free_speed_kmph: 20, capacity_vph: 200, status: open}
+    - {id: R4,  from: J1,    to: P1_IN, length_m: 50,  free_speed_kmph: 15, capacity_vph: 100, status: open}
+    - {id: R5,  from: J1,    to: P2_IN, length_m: 50,  free_speed_kmph: 15, capacity_vph: 100, status: open}
+    - {id: R6,  from: J1,    to: P3_IN, length_m: 50,  free_speed_kmph: 15, capacity_vph: 100, status: open}
+    - {id: R7,  from: J1,    to: G1,    length_m: 100, free_speed_kmph: 20, capacity_vph: 200, status: open}
+    - {id: R8,  from: J1,    to: G2,    length_m: 100, free_speed_kmph: 20, capacity_vph: 200, status: open}
+    - {id: R9,  from: J1,    to: G3,    length_m: 100, free_speed_kmph: 20, capacity_vph: 200, status: open}
+    - {id: R10, from: P1_IN, to: J1,    length_m: 50,  free_speed_kmph: 15, capacity_vph: 100, status: open}
+    - {id: R11, from: P2_IN, to: J1,    length_m: 50,  free_speed_kmph: 15, capacity_vph: 100, status: open}
+    - {id: R12, from: P3_IN, to: J1,    length_m: 50,  free_speed_kmph: 15, capacity_vph: 100, status: open}
+  parking_lots:
+    - {id: P1, entrance_node: P1_IN, capacity: 50, reserved: {accessible: 2, staff: 8}, zone: Zone_A, status: open, internal_search_sec_per_10pct: 6}
+    - {id: P2, entrance_node: P2_IN, capacity: 40, reserved: {accessible: 2, staff: 6}, zone: Zone_B, status: open, internal_search_sec_per_10pct: 5}
+    - {id: P3, entrance_node: P3_IN, capacity: 30, reserved: {accessible: 1, staff: 4}, zone: Zone_C, status: open, internal_search_sec_per_10pct: 4}
+  zones:
+    - id: Zone_A
+      name: Zone A
+      nearest_nodes: [J1]
+      walk_time_to_lot_sec: {P1: 60, P2: 120, P3: 180}
+    - id: Zone_B
+      name: Zone B
+      nearest_nodes: [J1]
+      walk_time_to_lot_sec: {P1: 120, P2: 60, P3: 180}
+    - id: Zone_C
+      name: Zone C
+      nearest_nodes: [J1]
+      walk_time_to_lot_sec: {P1: 180, P2: 120, P3: 60}
+  event_types: [normal, exam, fest]

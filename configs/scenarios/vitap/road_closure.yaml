@@ -1,0 +1,44 @@
+# E-RC: Road closure — main gate to academic lot closed during morning peak.
+# Alternative path exists: hostel lot (76 s), admin lot (104 s), sports lot (107 s)
+# all reachable from main gate. Visitor gate → admin / overflow still open.
+# Expected: 0 rejections; avg travel time/distance rises during ticks 60–180.
+#
+# Old scenario note: the previous version closed ALL 5 gate→lot roads, leaving
+# only sports lot reachable from main gate and NO path from visitor gate. About
+# half the vehicles (those randomly assigned to visitor gate) had no reachable lot
+# and were rejected — not because of real campus geometry, but because the scenario
+# was synthetic. Search time was near-zero for the 9.6 that did park (sports lot
+# is almost always empty). B1 overflow = 0 because sports lot was never full;
+# B2 overflow = 10.4 because B2 tried visitor-gate paths first (all closed).
+scenario_id: vitap-road-closure
+campus_id: vitap
+name: ROAD_CLOSURE_TIMED
+description: >
+  Main gate → academic lot road closed ticks 60–180 (09:00–11:00 morning peak).
+  Alternative paths: hostel lot (76 s from gate), admin lot (104 s), sports lot
+  (107 s). After tick 180 road reopens. Rerouting adds ~14–17 s per affected
+  vehicle. Zero rejections expected; overflow only if hostel+admin+sports fill.
+duration_minutes: 600
+vehicle_count: 400
+arrival_rate_profile:
+  type: profile
+  points:
+    - { time: 0,   rate: 0.3 }
+    - { time: 60,  rate: 1.2 }
+    - { time: 120, rate: 0.9 }
+    - { time: 300, rate: 0.5 }
+    - { time: 480, rate: 0.8 }
+    - { time: 540, rate: 0.3 }
+event_conditions: null
+availability_overrides:
+  closed_gates: []
+  closed_parking_lots: []
+  closed_roads: []
+  timed_closures:
+    - entity_type: road
+      entity_id: vitap-road-main-gate-to-academic-lot
+      start_tick: 60
+      end_tick: 180
+prediction_error_injection_level: 0.0
+random_seed: 7
+warmdown_minutes: 30

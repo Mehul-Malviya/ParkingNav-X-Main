@@ -1,0 +1,45 @@
+# E2: Placement drive — same base profile as E1, event via multiplier only
+# vehicle_count=470 = round(integral(E1_profile_with_1.8x_on_event_window)/integral(E1)*400)
+# No occupancy target was tuned — number follows from arrival-rate physics.
+scenario_id: vitap-event-placement
+campus_id: vitap
+name: PLACEMENT_EVENT
+description: "Placement drive 09:15-10:45. 1.8x demand multiplier on E1 base profile."
+duration_minutes: 600
+vehicle_count: 470
+start_time_min: 480
+arrival_rate_profile:
+  type: profile
+  points:
+    - { time: 0,   rate: 0.3 }
+    - { time: 60,  rate: 1.2 }
+    - { time: 120, rate: 0.8 }
+    - { time: 240, rate: 0.6 }
+    - { time: 360, rate: 0.9 }
+    - { time: 480, rate: 0.4 }
+    - { time: 540, rate: 0.2 }
+    - { time: 600, rate: 0.1 }
+
+event_conditions:
+  ad_hoc: true          # no DB event record; multiplier is scenario-defined
+  demand_multiplier: 1.8
+  start_tick: 75      # 09:15 AM
+  duration_ticks: 90  # until 10:45 AM
+  affected_zones: [academic]   # "research" zone does not exist in vitap.yaml
+  compliance_rate: 0.85
+
+availability_overrides:
+  closed_gates: []
+  closed_parking_lots: []
+  closed_roads: []
+
+prediction_error_injection_level: 0.0
+random_seed: 42
+warmdown_minutes: 30
+
+# use_prediction / use_optimization / use_uncertainty / proactive are not yet
+# read by the engine (pending Member 3). Set here for forward compatibility.
+use_prediction: true
+use_optimization: true
+use_uncertainty: true
+proactive: true

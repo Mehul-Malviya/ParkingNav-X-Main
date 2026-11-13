@@ -1,0 +1,126 @@
+# VIT-AP Campus — simulation schema (M1 spec format)
+# Real data sourced from configs/campus/vitap.yaml
+# 2 gates, 5 lots, 13 destination buildings — all real VIT-AP data
+
+campus:
+  id: vitap_v1
+  name: VIT-AP University
+  time_step_sec: 10
+
+  nodes:
+    # Gates (real coordinates from vitap.yaml)
+    - {id: G1, type: gate,          lat: 16.4912, lon: 80.5018, name: Main Gate}
+    - {id: G2, type: gate,          lat: 16.4895, lon: 80.4960, name: Visitor Gate}
+    # Junctions
+    - {id: J1, type: junction,      lat: 16.4920, lon: 80.5005, name: Main Gate Junction}
+    - {id: J2, type: junction,      lat: 16.4928, lon: 80.4982, name: Admin Junction}
+    - {id: J3, type: junction,      lat: 16.4915, lon: 80.5008, name: Hostel Junction}
+    # Lot entrances (real coordinates from vitap.yaml parking_lots)
+    - {id: P1_IN, type: lot_entrance, lat: 16.4935, lon: 80.4995, name: Academic Block Main Lot}
+    - {id: P2_IN, type: lot_entrance, lat: 16.4915, lon: 80.5008, name: Hostel Zone Parking}
+    - {id: P3_IN, type: lot_entrance, lat: 16.4928, lon: 80.4982, name: Administrative and Visitor Lot}
+    - {id: P4_IN, type: lot_entrance, lat: 16.4952, lon: 80.4990, name: Sports and Recreation Lot}
+    - {id: P5_IN, type: lot_entrance, lat: 16.4900, lon: 80.4970, name: Overflow Parking}
+
+  gates:
+    # Main gate: 2 lanes x 3 veh/min/lane = 360 vph (from vitap.yaml capacity:6 x 60)
+    - {id: G1, node: G1, service_rate_vph: 360, lanes: 2, status: open}
+    # Visitor gate: 1 lane x 3 veh/min/lane = 180 vph (from vitap.yaml capacity:3 x 60)
+    - {id: G2, node: G2, service_rate_vph: 180, lanes: 1, status: open}
+
+  roads:
+    - {id: R1,  from: G1,    to: J1,    length_m: 200, free_speed_kmph: 18, capacity_vph: 600, status: open}
+    - {id: R2,  from: J1,    to: P1_IN, length_m: 450, free_speed_kmph: 18, capacity_vph: 400, status: open}
+    - {id: R3,  from: J1,    to: P2_IN, length_m: 380, free_speed_kmph: 18, capacity_vph: 400, status: open}
+    - {id: R4,  from: J1,    to: J2,    length_m: 300, free_speed_kmph: 18, capacity_vph: 500, status: open}
+    - {id: R5,  from: J2,    to: P3_IN, length_m: 520, free_speed_kmph: 18, capacity_vph: 300, status: open}
+    - {id: R6,  from: J1,    to: P4_IN, length_m: 534, free_speed_kmph: 18, capacity_vph: 300, status: open}
+    - {id: R7,  from: G2,    to: J2,    length_m: 250, free_speed_kmph: 18, capacity_vph: 300, status: open}
+    - {id: R8,  from: J2,    to: P3_IN, length_m: 350, free_speed_kmph: 18, capacity_vph: 300, status: open}
+    - {id: R9,  from: G2,    to: P5_IN, length_m: 280, free_speed_kmph: 18, capacity_vph: 200, status: open}
+    - {id: R10, from: J1,    to: G1,    length_m: 200, free_speed_kmph: 18, capacity_vph: 600, status: open}
+    - {id: R11, from: J2,    to: G2,    length_m: 250, free_speed_kmph: 18, capacity_vph: 300, status: open}
+    - {id: R12, from: J2,    to: J1,    length_m: 300, free_speed_kmph: 18, capacity_vph: 500, status: open}
+    - {id: R13, from: P1_IN, to: J1,    length_m: 450, free_speed_kmph: 18, capacity_vph: 400, status: open}
+    - {id: R14, from: P2_IN, to: J1,    length_m: 380, free_speed_kmph: 18, capacity_vph: 400, status: open}
+    - {id: R15, from: P3_IN, to: J2,    length_m: 350, free_speed_kmph: 18, capacity_vph: 300, status: open}
+    - {id: R16, from: P4_IN, to: J1,    length_m: 534, free_speed_kmph: 18, capacity_vph: 300, status: open}
+    - {id: R17, from: P5_IN, to: G2,    length_m: 280, free_speed_kmph: 18, capacity_vph: 200, status: open}
+    - {id: R18, from: P5_IN, to: J2,    length_m: 200, free_speed_kmph: 18, capacity_vph: 200, status: open}
+
+  parking_lots:
+    # Real capacities from vitap.yaml total_capacity field
+    - {id: P1, entrance_node: P1_IN, capacity: 120, reserved: {accessible: 4, staff: 8},  zone: academic_zone,  status: open, internal_search_sec_per_10pct: 6}
+    - {id: P2, entrance_node: P2_IN, capacity: 180, reserved: {accessible: 6, staff: 12}, zone: hostel_zone,    status: open, internal_search_sec_per_10pct: 5}
+    - {id: P3, entrance_node: P3_IN, capacity: 80,  reserved: {accessible: 3, staff: 5},  zone: admin_zone,     status: open, internal_search_sec_per_10pct: 4}
+    - {id: P4, entrance_node: P4_IN, capacity: 100, reserved: {accessible: 3, staff: 7},  zone: sports_zone,    status: open, internal_search_sec_per_10pct: 4}
+    - {id: P5, entrance_node: P5_IN, capacity: 60,  reserved: {accessible: 2, staff: 4},  zone: overflow_zone,  status: open, internal_search_sec_per_10pct: 6}
+
+  zones:
+    # All 13 real destinations from vitap.yaml destinations section
+    - id: academic_zone
+      name: AB-1
+      nearest_nodes: [J1]
+      walk_time_to_lot_sec: {P1: 48, P2: 300, P3: 200, P4: 400, P5: 600}
+
+    - id: ab2_zone
+      name: AB-2
+      nearest_nodes: [J1]
+      walk_time_to_lot_sec: {P1: 56, P2: 350, P3: 220, P4: 420, P5: 620}
+
+    - id: admin_zone
+      name: CB
+      nearest_nodes: [J2]
+      walk_time_to_lot_sec: {P1: 32, P2: 400, P3: 36, P4: 500, P5: 300}
+
+    - id: food_street_zone
+      name: Food Street
+      nearest_nodes: [J3]
+      walk_time_to_lot_sec: {P1: 180, P2: 36, P3: 250, P4: 500, P5: 400}
+
+    - id: hostel_zone
+      name: MH-1
+      nearest_nodes: [J3]
+      walk_time_to_lot_sec: {P1: 300, P2: 28, P3: 400, P4: 600, P5: 350}
+
+    - id: mh2_zone
+      name: MH-2
+      nearest_nodes: [J3]
+      walk_time_to_lot_sec: {P1: 320, P2: 24, P3: 420, P4: 620, P5: 360}
+
+    - id: mh2_food_zone
+      name: MH-2 Food Store
+      nearest_nodes: [J3]
+      walk_time_to_lot_sec: {P1: 300, P2: 20, P3: 400, P4: 600, P5: 350}
+
+    - id: mh3_zone
+      name: MH-3
+      nearest_nodes: [J3]
+      walk_time_to_lot_sec: {P1: 340, P2: 22, P3: 440, P4: 640, P5: 380}
+
+    - id: mh6_zone
+      name: MH-6
+      nearest_nodes: [J3]
+      walk_time_to_lot_sec: {P1: 350, P2: 28, P3: 450, P4: 650, P5: 120}
+
+    - id: mh7_zone
+      name: MH-7
+      nearest_nodes: [J3]
+      walk_time_to_lot_sec: {P1: 310, P2: 26, P3: 410, P4: 610, P5: 340}
+
+    - id: lh1_zone
+      name: LH-1
+      nearest_nodes: [J2]
+      walk_time_to_lot_sec: {P1: 400, P2: 36, P3: 350, P4: 700, P5: 120}
+
+    - id: library_zone
+      name: Library
+      nearest_nodes: [J1]
+      walk_time_to_lot_sec: {P1: 24, P2: 350, P3: 180, P4: 450, P5: 580}
+
+    - id: sports_zone
+      name: Sports Complex
+      nearest_nodes: [J1]
+      walk_time_to_lot_sec: {P1: 76, P2: 400, P3: 300, P4: 20, P5: 650}
+
+  event_types: [normal, exam, placement, fest, sports, meeting]

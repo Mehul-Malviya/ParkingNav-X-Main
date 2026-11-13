@@ -1,0 +1,35 @@
+# S7: High Traffic — road capacity stress. High sustained volume causes BPR
+# travel-time inflation (congestion "high" label expected on internal roads).
+# No road closure — tests BPR congestion response, not route elimination.
+# vehicle_count=700 over 120 min → ~5.8 veh/min sustained (vs 9 vph gate capacity).
+# Verify: higher road travel times, congestion="high" on R1/R4 (main trunk roads).
+scenario_id: vitap-high-traffic
+campus_id: vitap
+name: HIGH_TRAFFIC
+description: "Sustained high volume (700 veh / 120 min); BPR congestion on trunk roads expected."
+duration_minutes: 120
+vehicle_count: 700
+start_time_min: 480
+
+arrival_rate_profile:
+  type: profile
+  points:
+    - { time: 0,   rate: 4.5 }   # high constant load from open
+    - { time: 60,  rate: 5.5 }   # peak — above gate service rate
+    - { time: 90,  rate: 3.0 }   # slight relief
+    - { time: 120, rate: 1.0 }   # run end
+
+event_conditions: null
+
+availability_overrides:
+  closed_gates: []
+  closed_parking_lots: []
+  closed_roads: []
+
+prediction_error_injection_level: 0.0
+random_seed: 7
+warmdown_minutes: 10
+use_prediction: true
+use_optimization: true
+use_uncertainty: true
+proactive: true

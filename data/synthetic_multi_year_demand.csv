@@ -1,0 +1,297 @@
+﻿timestamp,gate_id,lot_id,vehicle_arrivals,vehicle_departures,occupied_spaces,total_capacity,event_type,confidence,notes
+2024-01-15T08:00:00Z,vitap-gate-main,vitap-lot-academic-main,12,2,45,120,none,0.95,Normal Monday morning - post semester commencement
+2024-01-15T08:15:00Z,vitap-gate-main,vitap-lot-academic-main,15,3,57,120,none,0.95,Entry peak begins
+2024-01-15T08:30:00Z,vitap-gate-main,vitap-lot-academic-main,18,4,71,120,none,0.94,High arrivals
+2024-01-15T08:45:00Z,vitap-gate-main,vitap-lot-academic-main,16,5,82,120,none,0.96,Steady stream
+2024-01-15T09:00:00Z,vitap-gate-main,vitap-lot-academic-main,14,6,90,120,none,0.97,Morning peak ending
+2024-01-15T09:15:00Z,vitap-gate-main,vitap-lot-academic-main,10,8,92,120,none,0.96,Post-peak stable
+2024-01-15T09:30:00Z,vitap-gate-main,vitap-lot-academic-main,8,9,91,120,none,0.95,Stabilizing
+2024-01-15T09:45:00Z,vitap-gate-main,vitap-lot-academic-main,7,10,88,120,none,0.96,Declining
+2024-01-15T10:00:00Z,vitap-gate-main,vitap-lot-academic-main,6,10,84,120,none,0.97,Mid-morning
+2024-01-15T10:15:00Z,vitap-gate-main,vitap-lot-academic-main,5,9,80,120,none,0.97,Stable
+2024-01-15T10:30:00Z,vitap-gate-main,vitap-lot-academic-main,6,8,78,120,none,0.96,Consistent
+2024-01-15T10:45:00Z,vitap-gate-main,vitap-lot-academic-main,7,9,76,120,none,0.96,Stable
+2024-01-15T11:00:00Z,vitap-gate-main,vitap-lot-academic-main,8,9,75,120,none,0.95,Mid-day
+2024-01-15T11:15:00Z,vitap-gate-main,vitap-lot-academic-main,9,10,74,120,none,0.96,Lunchtime approach
+2024-01-15T11:30:00Z,vitap-gate-main,vitap-lot-academic-main,7,12,69,120,none,0.96,Lunch departures begin
+2024-01-15T11:45:00Z,vitap-gate-main,vitap-lot-academic-main,5,14,60,120,none,0.97,Lunch hour
+2024-01-15T12:00:00Z,vitap-gate-main,vitap-lot-academic-main,4,15,49,120,none,0.97,Lunch peak departures
+2024-01-15T12:15:00Z,vitap-gate-main,vitap-lot-academic-main,5,12,42,120,none,0.96,Post-lunch low
+2024-01-15T12:30:00Z,vitap-gate-main,vitap-lot-academic-main,7,8,41,120,none,0.95,Stable low
+2024-01-15T12:45:00Z,vitap-gate-main,vitap-lot-academic-main,9,7,43,120,none,0.96,Afternoon begins
+2024-01-15T13:00:00Z,vitap-gate-main,vitap-lot-academic-main,11,8,46,120,none,0.97,Afternoon arrivals
+2024-01-15T13:15:00Z,vitap-gate-main,vitap-lot-academic-main,12,8,50,120,none,0.95,Afternoon ramp
+2024-01-15T13:30:00Z,vitap-gate-main,vitap-lot-academic-main,10,7,53,120,none,0.96,Afternoon steady
+2024-01-15T13:45:00Z,vitap-gate-main,vitap-lot-academic-main,9,8,54,120,none,0.97,Consistent flow
+2024-01-15T14:00:00Z,vitap-gate-main,vitap-lot-academic-main,11,10,55,120,none,0.96,Mid-afternoon
+2024-01-15T14:15:00Z,vitap-gate-main,vitap-lot-academic-main,13,11,57,120,none,0.95,Slight uptick
+2024-01-15T14:30:00Z,vitap-gate-main,vitap-lot-academic-main,14,9,62,120,none,0.96,Afternoon peak starting
+2024-01-15T14:45:00Z,vitap-gate-main,vitap-lot-academic-main,16,8,70,120,none,0.94,High arrival rate
+2024-01-15T15:00:00Z,vitap-gate-main,vitap-lot-academic-main,18,10,78,120,none,0.93,Peak afternoon
+2024-01-15T15:15:00Z,vitap-gate-main,vitap-lot-academic-main,15,12,81,120,none,0.92,Sustained peak
+2024-01-15T15:30:00Z,vitap-gate-main,vitap-lot-academic-main,12,14,79,120,none,0.94,Peak declining
+2024-01-15T15:45:00Z,vitap-gate-main,vitap-lot-academic-main,10,12,77,120,none,0.95,Afternoon ending
+2024-01-15T16:00:00Z,vitap-gate-main,vitap-lot-academic-main,8,15,70,120,none,0.96,Evening arrivals start
+2024-01-15T16:15:00Z,vitap-gate-main,vitap-lot-academic-main,6,18,58,120,none,0.95,Departures exceed arrivals
+2024-01-15T16:30:00Z,vitap-gate-main,vitap-lot-academic-main,5,16,47,120,none,0.96,Evening exits peak
+2024-01-15T16:45:00Z,vitap-gate-main,vitap-lot-academic-main,4,14,37,120,none,0.97,Departures continue
+2024-01-15T17:00:00Z,vitap-gate-main,vitap-lot-academic-main,3,12,28,120,none,0.98,Evening calm
+2024-01-15T17:15:00Z,vitap-gate-main,vitap-lot-academic-main,2,10,20,120,none,0.98,Low activity
+2024-01-15T17:30:00Z,vitap-gate-main,vitap-lot-academic-main,1,8,13,120,none,0.99,Winding down
+2024-01-15T17:45:00Z,vitap-gate-main,vitap-lot-academic-main,0,7,6,120,none,0.99,Very low
+2024-01-15T18:00:00Z,vitap-gate-main,vitap-lot-academic-main,0,5,1,120,none,1.00,End of normal day
+2024-03-16T08:00:00Z,vitap-gate-main,vitap-lot-academic-main,18,2,52,120,other,0.92,TechFest 2024 Day 2 morning
+2024-03-16T08:15:00Z,vitap-gate-main,vitap-lot-academic-main,25,3,74,120,other,0.90,TechFest arrivals surge
+2024-03-16T08:30:00Z,vitap-gate-main,vitap-lot-academic-main,30,4,100,120,other,0.88,TechFest high demand
+2024-03-16T08:45:00Z,vitap-gate-main,vitap-lot-academic-main,28,5,120,120,other,0.85,At capacity - TechFest
+2024-03-16T09:00:00Z,vitap-gate-main,vitap-lot-academic-main,35,8,120,120,other,0.80,At capacity - overflow redirected
+2024-03-16T09:15:00Z,vitap-gate-main,vitap-lot-academic-main,38,10,120,120,other,0.78,Overflow high - all lots active
+2024-03-16T09:30:00Z,vitap-gate-main,vitap-lot-academic-main,32,12,120,120,other,0.80,Still at capacity
+2024-03-16T09:45:00Z,vitap-gate-main,vitap-lot-academic-main,25,15,120,120,other,0.83,Peak sustained
+2024-03-16T10:00:00Z,vitap-gate-main,vitap-lot-academic-main,20,18,120,120,other,0.85,Slight easing
+2024-03-16T10:15:00Z,vitap-gate-main,vitap-lot-academic-main,15,20,115,120,other,0.87,Easing off
+2024-03-16T10:30:00Z,vitap-gate-main,vitap-lot-academic-main,10,18,107,120,other,0.89,Post-peak
+2024-03-16T10:45:00Z,vitap-gate-main,vitap-lot-academic-main,8,16,99,120,other,0.91,Normalization
+2024-03-16T11:00:00Z,vitap-gate-main,vitap-lot-academic-main,7,14,92,120,other,0.92,Settling
+2024-03-16T11:15:00Z,vitap-gate-main,vitap-lot-academic-main,6,12,86,120,none,0.93,Back to moderate
+2024-03-16T11:30:00Z,vitap-gate-main,vitap-lot-academic-main,8,10,84,120,none,0.94,Stable
+2024-03-16T11:45:00Z,vitap-gate-main,vitap-lot-academic-main,9,10,83,120,none,0.94,Lunchtime
+2024-03-16T12:00:00Z,vitap-gate-main,vitap-lot-academic-main,7,14,76,120,none,0.95,Lunch departures
+2024-03-16T12:15:00Z,vitap-gate-main,vitap-lot-academic-main,5,12,69,120,none,0.95,Post-lunch
+2024-03-16T12:30:00Z,vitap-gate-main,vitap-lot-academic-main,6,10,65,120,none,0.96,Stable
+2024-03-16T12:45:00Z,vitap-gate-main,vitap-lot-academic-main,18,8,75,120,other,0.90,TechFest afternoon session starts
+2024-03-16T13:00:00Z,vitap-gate-main,vitap-lot-academic-main,25,7,93,120,other,0.87,Afternoon TechFest surge
+2024-03-16T13:15:00Z,vitap-gate-main,vitap-lot-academic-main,28,6,115,120,other,0.84,Near capacity again
+2024-03-16T13:30:00Z,vitap-gate-main,vitap-lot-academic-main,22,8,120,120,other,0.82,Full - overflow active
+2024-03-16T13:45:00Z,vitap-gate-main,vitap-lot-academic-main,18,10,120,120,other,0.82,At capacity afternoon
+2024-03-16T14:00:00Z,vitap-gate-main,vitap-lot-academic-main,15,12,120,120,other,0.84,Sustained peak
+2024-03-16T14:15:00Z,vitap-gate-main,vitap-lot-academic-main,12,15,117,120,other,0.86,Slight easing
+2024-03-16T14:30:00Z,vitap-gate-main,vitap-lot-academic-main,10,16,111,120,none,0.88,Post-session departures
+2024-03-16T14:45:00Z,vitap-gate-main,vitap-lot-academic-main,8,18,101,120,none,0.90,Normalization
+2024-03-16T15:00:00Z,vitap-gate-main,vitap-lot-academic-main,6,20,87,120,none,0.92,Declining
+2024-03-16T15:15:00Z,vitap-gate-main,vitap-lot-academic-main,5,18,74,120,none,0.93,Continued decline
+2024-03-16T15:30:00Z,vitap-gate-main,vitap-lot-academic-main,4,15,63,120,none,0.94,Evening approach
+2024-03-16T15:45:00Z,vitap-gate-main,vitap-lot-academic-main,3,14,52,120,none,0.95,Declining
+2024-03-16T16:00:00Z,vitap-gate-main,vitap-lot-academic-main,3,12,43,120,none,0.96,Evening
+2024-03-16T16:15:00Z,vitap-gate-main,vitap-lot-academic-main,2,10,35,120,none,0.96,Low
+2024-03-16T16:30:00Z,vitap-gate-main,vitap-lot-academic-main,1,9,27,120,none,0.97,Very low
+2024-03-16T16:45:00Z,vitap-gate-main,vitap-lot-academic-main,1,8,20,120,none,0.98,Winding down
+2024-03-16T17:00:00Z,vitap-gate-main,vitap-lot-academic-main,0,7,13,120,none,0.98,Very low
+2024-03-16T17:15:00Z,vitap-gate-main,vitap-lot-academic-main,0,6,7,120,none,0.99,End of TechFest day 2
+2024-05-25T08:00:00Z,vitap-gate-main,vitap-lot-admin-visitor,5,0,8,60,none,0.96,Convocation Day - visitor lot morning
+2024-05-25T08:15:00Z,vitap-gate-main,vitap-lot-admin-visitor,10,1,17,60,none,0.95,Families arriving for convocation
+2024-05-25T08:30:00Z,vitap-gate-main,vitap-lot-admin-visitor,18,1,34,60,none,0.92,Convocation arrivals surge
+2024-05-25T08:45:00Z,vitap-gate-main,vitap-lot-admin-visitor,22,2,54,60,graduation,0.88,High convocation demand
+2024-05-25T09:00:00Z,vitap-gate-main,vitap-lot-admin-visitor,20,2,60,60,graduation,0.85,At capacity - overflow to main lot
+2024-05-25T09:15:00Z,vitap-gate-main,vitap-lot-admin-visitor,18,3,60,60,graduation,0.82,Sustained overflow
+2024-05-25T09:30:00Z,vitap-gate-main,vitap-lot-admin-visitor,15,4,60,60,graduation,0.83,Still full
+2024-05-25T09:45:00Z,vitap-gate-main,vitap-lot-admin-visitor,12,5,60,60,graduation,0.85,At capacity
+2024-05-25T10:00:00Z,vitap-gate-main,vitap-lot-admin-visitor,10,6,60,60,graduation,0.86,Ceremony ongoing
+2024-05-25T10:15:00Z,vitap-gate-main,vitap-lot-admin-visitor,8,8,60,60,graduation,0.87,Slight easing
+2024-05-25T10:30:00Z,vitap-gate-main,vitap-lot-admin-visitor,6,10,56,60,graduation,0.88,Post-ceremony begins
+2024-05-25T10:45:00Z,vitap-gate-main,vitap-lot-admin-visitor,4,12,48,60,none,0.91,Families departing
+2024-05-25T11:00:00Z,vitap-gate-main,vitap-lot-admin-visitor,3,14,37,60,none,0.93,Post-convocation departures
+2024-05-25T11:15:00Z,vitap-gate-main,vitap-lot-admin-visitor,2,13,26,60,none,0.95,Declining
+2024-05-25T11:30:00Z,vitap-gate-main,vitap-lot-admin-visitor,2,10,18,60,none,0.96,Back to normal
+2024-05-25T11:45:00Z,vitap-gate-main,vitap-lot-admin-visitor,2,8,12,60,none,0.97,Low activity
+2024-05-25T12:00:00Z,vitap-gate-main,vitap-lot-admin-visitor,1,6,7,60,none,0.98,Very low
+2024-05-25T12:15:00Z,vitap-gate-main,vitap-lot-admin-visitor,1,5,3,60,none,0.99,End of convocation day
+2024-09-14T07:45:00Z,vitap-gate-main,vitap-lot-sports,8,0,8,100,none,0.97,Annual Sports Meet - early arrivals
+2024-09-14T08:00:00Z,vitap-gate-main,vitap-lot-sports,15,1,22,100,sports,0.95,Sports meet morning surge
+2024-09-14T08:15:00Z,vitap-gate-main,vitap-lot-sports,22,1,43,100,sports,0.93,High demand sports lot
+2024-09-14T08:30:00Z,vitap-gate-main,vitap-lot-sports,25,2,66,100,sports,0.90,Peak sports arrivals
+2024-09-14T08:45:00Z,vitap-gate-main,vitap-lot-sports,20,3,83,100,sports,0.88,Near capacity
+2024-09-14T09:00:00Z,vitap-gate-main,vitap-lot-sports,15,4,94,100,sports,0.86,Almost full
+2024-09-14T09:15:00Z,vitap-gate-main,vitap-lot-sports,10,5,99,100,sports,0.85,At capacity
+2024-09-14T09:30:00Z,vitap-gate-main,vitap-lot-sports,8,6,100,100,sports,0.84,Full - overflow to vitap-lot-overflow
+2024-09-14T09:45:00Z,vitap-gate-main,vitap-lot-sports,6,7,99,100,sports,0.85,Stable peak
+2024-09-14T10:00:00Z,vitap-gate-main,vitap-lot-sports,5,8,96,100,sports,0.87,Slight easing
+2024-09-14T10:15:00Z,vitap-gate-main,vitap-lot-sports,5,9,92,100,sports,0.88,Gradual departure
+2024-09-14T10:30:00Z,vitap-gate-main,vitap-lot-sports,4,10,86,100,sports,0.89,Sports activities ongoing
+2024-09-14T10:45:00Z,vitap-gate-main,vitap-lot-sports,4,11,79,100,sports,0.90,Declining
+2024-09-14T11:00:00Z,vitap-gate-main,vitap-lot-sports,5,10,74,100,sports,0.91,Midday sports
+2024-09-14T11:15:00Z,vitap-gate-main,vitap-lot-sports,6,9,71,100,sports,0.91,Stable midday
+2024-09-14T11:30:00Z,vitap-gate-main,vitap-lot-sports,5,9,67,100,sports,0.92,Lunch break
+2024-09-14T11:45:00Z,vitap-gate-main,vitap-lot-sports,4,11,60,100,none,0.93,Lunch departures
+2024-09-14T12:00:00Z,vitap-gate-main,vitap-lot-sports,3,12,51,100,none,0.94,Lunch low
+2024-09-14T12:15:00Z,vitap-gate-main,vitap-lot-sports,5,10,46,100,none,0.94,Post-lunch
+2024-09-14T12:30:00Z,vitap-gate-main,vitap-lot-sports,8,8,46,100,none,0.94,Afternoon sports start
+2024-09-14T12:45:00Z,vitap-gate-main,vitap-lot-sports,14,6,54,100,sports,0.92,Afternoon session arrivals
+2024-09-14T13:00:00Z,vitap-gate-main,vitap-lot-sports,18,5,67,100,sports,0.90,High afternoon demand
+2024-09-14T13:15:00Z,vitap-gate-main,vitap-lot-sports,20,5,82,100,sports,0.88,Rising
+2024-09-14T13:30:00Z,vitap-gate-main,vitap-lot-sports,18,6,94,100,sports,0.86,Near capacity again
+2024-09-14T13:45:00Z,vitap-gate-main,vitap-lot-sports,14,7,100,100,sports,0.85,Full afternoon
+2024-09-14T14:00:00Z,vitap-gate-main,vitap-lot-sports,10,8,100,100,sports,0.85,At capacity
+2024-09-14T14:15:00Z,vitap-gate-main,vitap-lot-sports,8,10,98,100,sports,0.86,Slight easing
+2024-09-14T14:30:00Z,vitap-gate-main,vitap-lot-sports,6,12,92,100,sports,0.88,Post-finals departures
+2024-09-14T14:45:00Z,vitap-gate-main,vitap-lot-sports,4,15,81,100,none,0.90,Departures peak
+2024-09-14T15:00:00Z,vitap-gate-main,vitap-lot-sports,3,18,66,100,none,0.92,Evening decline
+2024-09-14T15:15:00Z,vitap-gate-main,vitap-lot-sports,2,16,52,100,none,0.94,Declining fast
+2024-09-14T15:30:00Z,vitap-gate-main,vitap-lot-sports,2,14,40,100,none,0.95,Low
+2024-09-14T15:45:00Z,vitap-gate-main,vitap-lot-sports,1,12,29,100,none,0.96,Very low
+2024-09-14T16:00:00Z,vitap-gate-main,vitap-lot-sports,1,10,20,100,none,0.97,Evening
+2024-09-14T16:15:00Z,vitap-gate-main,vitap-lot-sports,0,9,11,100,none,0.98,Winding down
+2024-09-14T16:30:00Z,vitap-gate-main,vitap-lot-sports,0,7,4,100,none,0.99,End of sports meet day 1
+2024-02-14T08:00:00Z,vitap-gate-visitor,vitap-lot-hostel,8,1,30,80,none,0.95,Mid-semester exam week - hostel lot
+2024-02-14T08:15:00Z,vitap-gate-visitor,vitap-lot-hostel,11,2,39,80,none,0.95,Exam day morning
+2024-02-14T08:30:00Z,vitap-gate-visitor,vitap-lot-hostel,13,3,49,80,none,0.94,Peak exam arrivals
+2024-02-14T08:45:00Z,vitap-gate-visitor,vitap-lot-hostel,12,4,57,80,none,0.96,Exam rush
+2024-02-14T09:00:00Z,vitap-gate-visitor,vitap-lot-hostel,10,4,63,80,none,0.97,Near peak
+2024-02-14T09:15:00Z,vitap-gate-visitor,vitap-lot-hostel,8,5,66,80,none,0.96,Exam session ongoing
+2024-02-14T09:30:00Z,vitap-gate-visitor,vitap-lot-hostel,5,6,65,80,none,0.95,Stable exam lot
+2024-02-14T09:45:00Z,vitap-gate-visitor,vitap-lot-hostel,4,7,62,80,none,0.96,Slight decline
+2024-02-14T10:00:00Z,vitap-gate-visitor,vitap-lot-hostel,3,8,57,80,none,0.97,Mid-morning exam
+2024-02-14T10:15:00Z,vitap-gate-visitor,vitap-lot-hostel,3,8,52,80,none,0.97,Stable
+2024-02-14T10:30:00Z,vitap-gate-visitor,vitap-lot-hostel,4,7,49,80,none,0.97,Stable
+2024-02-14T10:45:00Z,vitap-gate-visitor,vitap-lot-hostel,5,6,48,80,none,0.96,Consistent
+2024-02-14T11:00:00Z,vitap-gate-visitor,vitap-lot-hostel,6,6,48,80,none,0.95,Stable mid-morning
+2024-02-14T11:15:00Z,vitap-gate-visitor,vitap-lot-hostel,7,7,48,80,none,0.96,Consistent
+2024-02-14T11:30:00Z,vitap-gate-visitor,vitap-lot-hostel,5,9,44,80,none,0.96,Exam end departures begin
+2024-02-14T11:45:00Z,vitap-gate-visitor,vitap-lot-hostel,4,12,36,80,none,0.97,Exam finishers departing
+2024-02-14T12:00:00Z,vitap-gate-visitor,vitap-lot-hostel,3,14,25,80,none,0.97,Post-exam rush out
+2024-02-14T12:15:00Z,vitap-gate-visitor,vitap-lot-hostel,4,10,19,80,none,0.96,Settling
+2024-02-14T12:30:00Z,vitap-gate-visitor,vitap-lot-hostel,5,7,17,80,none,0.96,Stable low
+2024-02-14T12:45:00Z,vitap-gate-visitor,vitap-lot-hostel,7,6,18,80,none,0.95,Afternoon arrives
+2024-02-14T13:00:00Z,vitap-gate-visitor,vitap-lot-hostel,9,6,21,80,none,0.95,Afternoon exam arrivals
+2024-02-14T13:15:00Z,vitap-gate-visitor,vitap-lot-hostel,11,7,25,80,none,0.96,Afternoon session
+2024-02-14T13:30:00Z,vitap-gate-visitor,vitap-lot-hostel,10,7,28,80,none,0.96,Stable afternoon
+2024-02-14T13:45:00Z,vitap-gate-visitor,vitap-lot-hostel,8,8,28,80,none,0.97,Consistent
+2024-02-14T14:00:00Z,vitap-gate-visitor,vitap-lot-hostel,7,8,27,80,none,0.97,Mid-afternoon
+2024-02-14T14:15:00Z,vitap-gate-visitor,vitap-lot-hostel,6,8,25,80,none,0.97,Declining
+2024-02-14T14:30:00Z,vitap-gate-visitor,vitap-lot-hostel,5,9,21,80,none,0.97,Exam session ends
+2024-02-14T14:45:00Z,vitap-gate-visitor,vitap-lot-hostel,4,10,15,80,none,0.98,Post-exam departures
+2024-02-14T15:00:00Z,vitap-gate-visitor,vitap-lot-hostel,3,9,9,80,none,0.98,Low
+2024-02-14T15:15:00Z,vitap-gate-visitor,vitap-lot-hostel,2,7,4,80,none,0.99,Very low
+2024-02-14T15:30:00Z,vitap-gate-visitor,vitap-lot-hostel,0,4,0,80,none,1.00,End of exam day
+2024-09-14T07:45:00Z,vitap-gate-main,vitap-lot-overflow,5,0,5,60,none,0.97,Sports meet overflow lot - early
+2024-09-14T08:00:00Z,vitap-gate-main,vitap-lot-overflow,10,0,15,60,sports,0.95,Sports overflow morning
+2024-09-14T08:15:00Z,vitap-gate-main,vitap-lot-overflow,18,1,32,60,sports,0.93,Overflow filling
+2024-09-14T08:30:00Z,vitap-gate-main,vitap-lot-overflow,30,2,60,60,sports,0.90,Heavy overflow - sports lot full
+2024-09-14T08:45:00Z,vitap-gate-main,vitap-lot-overflow,40,3,97,60,sports,0.87,High overflow demand
+2024-09-14T09:00:00Z,vitap-gate-main,vitap-lot-overflow,45,4,138,60,sports,0.85,Overflow peak
+2024-09-14T09:15:00Z,vitap-gate-main,vitap-lot-overflow,38,5,171,60,sports,0.83,Still very high
+2024-09-14T09:30:00Z,vitap-gate-main,vitap-lot-overflow,28,6,193,60,sports,0.82,Near overflow capacity
+2024-09-14T09:45:00Z,vitap-gate-main,vitap-lot-overflow,15,7,60,60,sports,0.80,Overflow lot FULL
+2024-09-14T10:00:00Z,vitap-gate-main,vitap-lot-overflow,10,8,60,60,sports,0.80,At max capacity
+2024-09-14T10:15:00Z,vitap-gate-main,vitap-lot-overflow,8,10,198,60,sports,0.81,Slight easing
+2024-09-14T10:30:00Z,vitap-gate-main,vitap-lot-overflow,6,12,192,60,sports,0.83,Gradual release
+2024-09-14T10:45:00Z,vitap-gate-main,vitap-lot-overflow,5,14,183,60,sports,0.85,Declining
+2024-09-14T11:00:00Z,vitap-gate-main,vitap-lot-overflow,4,16,171,60,sports,0.87,Continued departure
+2024-09-14T11:15:00Z,vitap-gate-main,vitap-lot-overflow,4,18,157,60,sports,0.88,Lunch break departures
+2024-09-14T11:30:00Z,vitap-gate-main,vitap-lot-overflow,3,20,140,60,none,0.90,Post-morning session
+2024-09-14T11:45:00Z,vitap-gate-main,vitap-lot-overflow,3,18,125,60,none,0.91,Continuing
+2024-09-14T12:00:00Z,vitap-gate-main,vitap-lot-overflow,2,16,111,60,none,0.92,Lunch low
+2024-09-14T12:15:00Z,vitap-gate-main,vitap-lot-overflow,3,14,100,60,none,0.93,Stable
+2024-09-14T12:30:00Z,vitap-gate-main,vitap-lot-overflow,5,12,93,60,none,0.93,Afternoon approach
+2024-09-14T12:45:00Z,vitap-gate-main,vitap-lot-overflow,12,10,95,60,sports,0.91,Afternoon session arrivals
+2024-09-14T13:00:00Z,vitap-gate-main,vitap-lot-overflow,20,8,107,60,sports,0.89,Afternoon overflow surge
+2024-09-14T13:15:00Z,vitap-gate-main,vitap-lot-overflow,25,7,125,60,sports,0.87,Rising again
+2024-09-14T13:30:00Z,vitap-gate-main,vitap-lot-overflow,22,7,140,60,sports,0.86,Afternoon peak
+2024-09-14T13:45:00Z,vitap-gate-main,vitap-lot-overflow,18,8,150,60,sports,0.85,Sustained
+2024-09-14T14:00:00Z,vitap-gate-main,vitap-lot-overflow,14,10,154,60,sports,0.85,Stable high
+2024-09-14T14:15:00Z,vitap-gate-main,vitap-lot-overflow,10,12,152,60,sports,0.86,Easing
+2024-09-14T14:30:00Z,vitap-gate-main,vitap-lot-overflow,8,15,145,60,none,0.87,Post-finals
+2024-09-14T14:45:00Z,vitap-gate-main,vitap-lot-overflow,5,18,132,60,none,0.89,Evening departures
+2024-09-14T15:00:00Z,vitap-gate-main,vitap-lot-overflow,3,20,115,60,none,0.91,Declining fast
+2024-09-14T15:15:00Z,vitap-gate-main,vitap-lot-overflow,2,18,99,60,none,0.92,Continuing
+2024-09-14T15:30:00Z,vitap-gate-main,vitap-lot-overflow,2,16,85,60,none,0.93,Low
+2024-09-14T15:45:00Z,vitap-gate-main,vitap-lot-overflow,1,14,72,60,none,0.94,Very low
+2024-09-14T16:00:00Z,vitap-gate-main,vitap-lot-overflow,1,12,61,60,none,0.95,Evening
+2024-09-14T16:15:00Z,vitap-gate-main,vitap-lot-overflow,0,15,46,60,none,0.96,Departures
+2024-09-14T16:30:00Z,vitap-gate-main,vitap-lot-overflow,0,18,28,60,none,0.97,Winding down
+2024-09-14T16:45:00Z,vitap-gate-main,vitap-lot-overflow,0,15,13,60,none,0.98,Very low
+2024-09-14T17:00:00Z,vitap-gate-main,vitap-lot-overflow,0,10,3,60,none,0.99,End of sports meet day 1
+2025-01-13T08:00:00Z,vitap-gate-main,vitap-lot-academic-main,13,2,46,120,none,0.95,2025 Semester commencement week - normal Monday
+2025-01-13T08:15:00Z,vitap-gate-main,vitap-lot-academic-main,16,3,59,120,none,0.95,Entry peak begins
+2025-01-13T08:30:00Z,vitap-gate-main,vitap-lot-academic-main,19,4,74,120,none,0.94,High arrivals
+2025-01-13T08:45:00Z,vitap-gate-main,vitap-lot-academic-main,17,5,86,120,none,0.96,Steady stream
+2025-01-13T09:00:00Z,vitap-gate-main,vitap-lot-academic-main,13,7,92,120,none,0.97,Morning peak ending
+2025-01-13T09:15:00Z,vitap-gate-main,vitap-lot-academic-main,9,9,92,120,none,0.96,Stable post-peak
+2025-01-13T09:30:00Z,vitap-gate-main,vitap-lot-academic-main,7,10,89,120,none,0.95,Declining
+2025-01-13T09:45:00Z,vitap-gate-main,vitap-lot-academic-main,6,11,84,120,none,0.96,Mid-morning
+2025-01-13T10:00:00Z,vitap-gate-main,vitap-lot-academic-main,6,10,80,120,none,0.97,Stable
+2025-01-13T11:00:00Z,vitap-gate-main,vitap-lot-academic-main,8,9,74,120,none,0.96,Mid-day
+2025-01-13T12:00:00Z,vitap-gate-main,vitap-lot-academic-main,5,15,55,120,none,0.97,Lunch departures
+2025-01-13T13:00:00Z,vitap-gate-main,vitap-lot-academic-main,10,8,48,120,none,0.96,Afternoon arrivals
+2025-01-13T14:00:00Z,vitap-gate-main,vitap-lot-academic-main,12,10,55,120,none,0.96,Mid-afternoon
+2025-01-13T15:00:00Z,vitap-gate-main,vitap-lot-academic-main,16,11,72,120,none,0.94,Afternoon peak
+2025-01-13T16:00:00Z,vitap-gate-main,vitap-lot-academic-main,7,16,60,120,none,0.96,Evening departure start
+2025-01-13T17:00:00Z,vitap-gate-main,vitap-lot-academic-main,2,13,25,120,none,0.98,Evening calm
+2025-01-13T18:00:00Z,vitap-gate-main,vitap-lot-academic-main,0,5,2,120,none,1.00,End of day
+2025-03-15T08:00:00Z,vitap-gate-main,vitap-lot-academic-main,20,2,55,120,other,0.92,TechFest 2025 Day 1 morning
+2025-03-15T08:30:00Z,vitap-gate-main,vitap-lot-academic-main,32,3,84,120,other,0.89,TechFest surge
+2025-03-15T09:00:00Z,vitap-gate-main,vitap-lot-academic-main,36,7,113,120,other,0.85,Near capacity
+2025-03-15T09:30:00Z,vitap-gate-main,vitap-lot-academic-main,28,10,120,120,other,0.82,Full - overflow active
+2025-03-15T10:00:00Z,vitap-gate-main,vitap-lot-academic-main,20,14,120,120,other,0.83,Sustained peak
+2025-03-15T11:00:00Z,vitap-gate-main,vitap-lot-academic-main,8,16,106,120,other,0.88,Post-morning session
+2025-03-15T12:00:00Z,vitap-gate-main,vitap-lot-academic-main,6,14,88,120,none,0.91,Lunch
+2025-03-15T13:00:00Z,vitap-gate-main,vitap-lot-academic-main,22,6,98,120,other,0.88,Afternoon TechFest
+2025-03-15T14:00:00Z,vitap-gate-main,vitap-lot-academic-main,25,9,114,120,other,0.85,Afternoon peak
+2025-03-15T15:00:00Z,vitap-gate-main,vitap-lot-academic-main,14,18,105,120,other,0.88,Declining
+2025-03-15T16:00:00Z,vitap-gate-main,vitap-lot-academic-main,5,20,75,120,none,0.92,Evening departures
+2025-03-15T17:00:00Z,vitap-gate-main,vitap-lot-academic-main,1,18,32,120,none,0.97,Low
+2025-03-15T18:00:00Z,vitap-gate-main,vitap-lot-academic-main,0,8,6,120,none,1.00,End of TechFest day 1
+2025-05-24T08:00:00Z,vitap-gate-main,vitap-lot-admin-visitor,6,0,10,60,none,0.96,Convocation 2025 - families arriving
+2025-05-24T08:30:00Z,vitap-gate-main,vitap-lot-admin-visitor,20,1,29,60,graduation,0.91,Convocation arrivals surge
+2025-05-24T09:00:00Z,vitap-gate-main,vitap-lot-admin-visitor,22,2,49,60,graduation,0.87,High demand
+2025-05-24T09:30:00Z,vitap-gate-main,vitap-lot-admin-visitor,16,3,60,60,graduation,0.84,Full - overflow to main lot
+2025-05-24T10:00:00Z,vitap-gate-main,vitap-lot-admin-visitor,10,5,60,60,graduation,0.85,At capacity
+2025-05-24T10:30:00Z,vitap-gate-main,vitap-lot-admin-visitor,6,10,56,60,graduation,0.88,Post-ceremony easing
+2025-05-24T11:00:00Z,vitap-gate-main,vitap-lot-admin-visitor,3,14,45,60,none,0.92,Families departing
+2025-05-24T11:30:00Z,vitap-gate-main,vitap-lot-admin-visitor,2,12,35,60,none,0.94,Normalization
+2025-05-24T12:00:00Z,vitap-gate-main,vitap-lot-admin-visitor,1,10,26,60,none,0.96,Declining
+2025-05-24T12:30:00Z,vitap-gate-main,vitap-lot-admin-visitor,1,8,19,60,none,0.97,Low
+2025-05-24T13:00:00Z,vitap-gate-main,vitap-lot-admin-visitor,0,6,13,60,none,0.98,Very low
+2025-05-24T13:30:00Z,vitap-gate-main,vitap-lot-admin-visitor,0,5,8,60,none,0.99,End of convocation day
+2025-09-13T08:00:00Z,vitap-gate-main,vitap-lot-sports,16,1,24,100,sports,0.94,Annual Sports Meet 2025 Day 1
+2025-09-13T08:30:00Z,vitap-gate-main,vitap-lot-sports,26,2,48,100,sports,0.91,Sports meet surge
+2025-09-13T09:00:00Z,vitap-gate-main,vitap-lot-sports,22,4,66,100,sports,0.89,High demand
+2025-09-13T09:30:00Z,vitap-gate-main,vitap-lot-sports,18,5,79,100,sports,0.87,Near capacity
+2025-09-13T10:00:00Z,vitap-gate-main,vitap-lot-sports,12,6,85,100,sports,0.86,Approaching full
+2025-09-13T10:30:00Z,vitap-gate-main,vitap-lot-sports,8,8,85,100,sports,0.86,Stable peak
+2025-09-13T11:00:00Z,vitap-gate-main,vitap-lot-sports,6,10,81,100,sports,0.87,Slight easing
+2025-09-13T12:00:00Z,vitap-gate-main,vitap-lot-sports,4,14,63,100,none,0.91,Lunch break
+2025-09-13T13:00:00Z,vitap-gate-main,vitap-lot-sports,16,6,73,100,sports,0.89,Afternoon session
+2025-09-13T14:00:00Z,vitap-gate-main,vitap-lot-sports,18,8,83,100,sports,0.87,Afternoon peak
+2025-09-13T15:00:00Z,vitap-gate-main,vitap-lot-sports,10,14,75,100,sports,0.88,Post-finals
+2025-09-13T16:00:00Z,vitap-gate-main,vitap-lot-sports,3,18,47,100,none,0.93,Evening decline
+2025-09-13T17:00:00Z,vitap-gate-main,vitap-lot-sports,1,14,15,100,none,0.97,Winding down
+2025-09-13T17:30:00Z,vitap-gate-main,vitap-lot-sports,0,9,6,100,none,0.99,End of Sports Meet 2025 day 1
+2026-01-12T08:00:00Z,vitap-gate-main,vitap-lot-academic-main,14,2,48,120,none,0.95,2026 Semester start - normal Monday
+2026-01-12T08:30:00Z,vitap-gate-main,vitap-lot-academic-main,20,4,64,120,none,0.94,Morning peak
+2026-01-12T09:00:00Z,vitap-gate-main,vitap-lot-academic-main,15,7,72,120,none,0.96,Post-peak
+2026-01-12T10:00:00Z,vitap-gate-main,vitap-lot-academic-main,6,10,62,120,none,0.97,Stable
+2026-01-12T12:00:00Z,vitap-gate-main,vitap-lot-academic-main,5,14,48,120,none,0.97,Lunch
+2026-01-12T13:00:00Z,vitap-gate-main,vitap-lot-academic-main,11,8,44,120,none,0.96,Afternoon
+2026-01-12T15:00:00Z,vitap-gate-main,vitap-lot-academic-main,17,12,65,120,none,0.94,Afternoon peak
+2026-01-12T17:00:00Z,vitap-gate-main,vitap-lot-academic-main,2,14,28,120,none,0.98,Evening
+2026-01-12T18:00:00Z,vitap-gate-main,vitap-lot-academic-main,0,5,3,120,none,1.00,End of day
+2026-02-11T08:00:00Z,vitap-gate-visitor,vitap-lot-hostel,9,1,31,80,none,0.95,Mid-semester exams 2026 - hostel lot
+2026-02-11T08:30:00Z,vitap-gate-visitor,vitap-lot-hostel,14,3,42,80,none,0.94,Exam day peak
+2026-02-11T09:00:00Z,vitap-gate-visitor,vitap-lot-hostel,11,4,49,80,none,0.96,Exam rush
+2026-02-11T10:00:00Z,vitap-gate-visitor,vitap-lot-hostel,4,8,40,80,none,0.97,Stable exam session
+2026-02-11T12:00:00Z,vitap-gate-visitor,vitap-lot-hostel,3,14,22,80,none,0.97,Post-exam departures
+2026-02-11T14:00:00Z,vitap-gate-visitor,vitap-lot-hostel,6,7,20,80,none,0.97,Afternoon exam session
+2026-02-11T15:30:00Z,vitap-gate-visitor,vitap-lot-hostel,1,9,7,80,none,0.99,Post-afternoon exam
+2026-02-11T16:00:00Z,vitap-gate-visitor,vitap-lot-hostel,0,5,2,80,none,1.00,End of exam day
+2026-03-14T08:00:00Z,vitap-gate-main,vitap-lot-academic-main,22,2,60,120,other,0.92,TechFest 2026 Day 1 morning
+2026-03-14T09:00:00Z,vitap-gate-main,vitap-lot-academic-main,38,7,115,120,other,0.85,TechFest surge - near capacity
+2026-03-14T09:30:00Z,vitap-gate-main,vitap-lot-academic-main,30,10,120,120,other,0.82,Full - overflow active
+2026-03-14T10:30:00Z,vitap-gate-main,vitap-lot-academic-main,10,18,108,120,other,0.87,Post-morning easing
+2026-03-14T12:00:00Z,vitap-gate-main,vitap-lot-academic-main,7,14,90,120,none,0.91,Lunch
+2026-03-14T13:30:00Z,vitap-gate-main,vitap-lot-academic-main,24,7,105,120,other,0.87,Afternoon TechFest surge
+2026-03-14T15:00:00Z,vitap-gate-main,vitap-lot-academic-main,12,20,90,120,other,0.89,Declining
+2026-03-14T17:00:00Z,vitap-gate-main,vitap-lot-academic-main,1,18,30,120,none,0.97,Evening low
+2026-03-14T18:00:00Z,vitap-gate-main,vitap-lot-academic-main,0,10,4,120,none,1.00,End of TechFest 2026 day 1
+2026-09-12T08:00:00Z,vitap-gate-main,vitap-lot-sports,17,1,25,100,sports,0.94,Annual Sports Meet 2026 Day 1
+2026-09-12T08:30:00Z,vitap-gate-main,vitap-lot-sports,28,2,51,100,sports,0.91,Surge
+2026-09-12T09:00:00Z,vitap-gate-main,vitap-lot-sports,20,4,67,100,sports,0.89,High demand
+2026-09-12T09:30:00Z,vitap-gate-main,vitap-lot-sports,16,5,78,100,sports,0.87,Near capacity
+2026-09-12T10:00:00Z,vitap-gate-main,vitap-lot-sports,10,7,81,100,sports,0.87,Stable peak
+2026-09-12T12:00:00Z,vitap-gate-main,vitap-lot-sports,4,15,58,100,none,0.92,Lunch break
+2026-09-12T13:30:00Z,vitap-gate-main,vitap-lot-sports,18,7,72,100,sports,0.89,Afternoon session
+2026-09-12T15:00:00Z,vitap-gate-main,vitap-lot-sports,9,15,62,100,none,0.91,Post-finals
+2026-09-12T17:00:00Z,vitap-gate-main,vitap-lot-sports,1,14,14,100,none,0.97,Evening low
+2026-09-12T17:30:00Z,vitap-gate-main,vitap-lot-sports,0,9,5,100,none,0.99,End of Sports Meet 2026 day 1
+
+

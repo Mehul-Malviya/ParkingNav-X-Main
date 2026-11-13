@@ -1,0 +1,35 @@
+# E8: E1 arrival profile with a vehicle mix whose dwell differs by type.
+# ASSUMED, NOT MEASURED: the shares and dwell medians below are placeholders chosen so the
+# model can be exercised (students ~4 h class blocks, staff ~full day, visitors ~1 h).
+# Replace with counting-day data (docs/member1/observation_plan.md) before drawing conclusions.
+# SYNTHETIC scenario. Vehicle arrivals/timing/dwell are simulated, not
+# measured VIT-AP behavior. Destination names are real (see PROVENANCE.md).
+scenario_id: vitap-e8-vehicle-types
+campus_id: vitap
+name: VEHICLE_TYPES
+duration_minutes: 600
+vehicle_count: 400
+start_time_min: 480
+arrival_rate_profile:
+  type: profile
+  points:
+    - { time: 0, rate: 0.3 }
+    - { time: 60, rate: 1.2 }
+    - { time: 120, rate: 0.8 }
+    - { time: 240, rate: 0.6 }
+    - { time: 360, rate: 0.9 }
+    - { time: 480, rate: 0.4 }
+    - { time: 540, rate: 0.2 }
+    - { time: 600, rate: 0.1 }
+event_conditions: null
+availability_overrides:
+  closed_gates: []
+  closed_parking_lots: []
+  closed_roads: []
+prediction_error_injection_level: 0.0
+random_seed: 7
+warmdown_minutes: 30
+vehicle_types:            # ASSUMED parameters, see header
+  student: { share: 0.50, dwell_median_minutes: 240, dwell_sigma: 0.40 }
+  staff:   { share: 0.30, dwell_median_minutes: 420, dwell_sigma: 0.25 }
+  visitor: { share: 0.20, dwell_median_minutes: 60,  dwell_sigma: 0.50 }

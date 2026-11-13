@@ -1,0 +1,23 @@
+# SYNTHETIC scenario: the morning rush with the Academic Block Main Lot
+# closed (e.g. maintenance). Drivers must use the other four lots.
+scenario_id: vitap-lot-closure
+campus_id: vitap
+name: LOT_CLOSURE
+description: Morning rush with the academic lot closed.
+duration_minutes: 120
+vehicle_count: 400
+arrival_rate_profile:
+  type: profile
+  points:
+    - { time: 0, rate: 0.3 }
+    - { time: 30, rate: 1.0 }
+    - { time: 60, rate: 1.0 }
+    - { time: 120, rate: 0.2 }
+event_conditions: null
+availability_overrides:
+  closed_gates: []
+  closed_parking_lots: [vitap-lot-academic-main]
+  closed_roads: []
+prediction_error_injection_level: 0.0
+dwell_minutes: { min: 120, max: 420 }
+random_seed: 300

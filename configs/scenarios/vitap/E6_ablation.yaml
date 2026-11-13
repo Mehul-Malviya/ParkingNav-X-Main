@@ -1,0 +1,56 @@
+# E6: Ablation Study — which component actually drives ParkingNav-X's improvement?
+#
+# Four variants (A → D) progressively enable system components on an identical
+# normal-day demand profile (same as E1). Run each variant with the same seeds
+# (0–29) to isolate each component's marginal contribution.
+#
+# Variant A — prediction only (use_prediction=true, rest off)
+#   Baseline + occupancy forecast from Member 2. Measures forecast value alone.
+# Variant B — prediction + optimization (use_optimization=true added)
+#   Adds Member 3's optimizer on top of A. Measures optimizer marginal gain.
+# Variant C — prediction + optimization + uncertainty (use_uncertainty=true added)
+#   Adds uncertainty intervals. Measures whether hedging under uncertainty helps.
+# Variant D — full system (proactive=true added) — matches strategy P
+#   Adds proactive rerouting. Full ParkingNav-X stack; should match E1's P results.
+#
+# NOTE: ablation flags are accepted by ScenarioConfig and plumbing is verified
+# by test_ablation_flags_plumbing.py. Full consumption by SimulationEngine
+# depends on Member 3's optimizer variants being wired in.
+#
+# SYNTHETIC scenario. Vehicle arrivals, timing, dwell are simulated.
+
+# ─── Variant A: prediction only ───────────────────────────────────────────────
+scenario_id: vitap-e6-ablation-A
+campus_id: vitap
+name: E6_ABLATION_A_PREDICTION_ONLY
+description: "Ablation A: occupancy forecast enabled; optimizer and proactive routing off"
+duration_minutes: 600
+vehicle_count: 400
+start_time_min: 480
+
+arrival_rate_profile:
+  type: profile
+  points:
+    - { time: 0,   rate: 0.3 }
+    - { time: 60,  rate: 1.2 }
+    - { time: 120, rate: 0.8 }
+    - { time: 240, rate: 0.6 }
+    - { time: 360, rate: 0.9 }
+    - { time: 480, rate: 0.4 }
+    - { time: 540, rate: 0.2 }
+    - { time: 600, rate: 0.1 }
+
+event_conditions: null
+availability_overrides:
+  closed_gates: []
+  closed_parking_lots: []
+  closed_roads: []
+
+prediction_error_injection_level: 0.0
+random_seed: 7
+warmdown_minutes: 30
+
+use_prediction: true
+use_optimization: false
+use_uncertainty: false
+proactive: false

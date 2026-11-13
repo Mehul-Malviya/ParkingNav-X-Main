@@ -1,0 +1,37 @@
+# S8: Scale 500 — scalability test with 500 vehicles, full 600-min run.
+# Same arrival shape as E1 normal day; only vehicle_count increased.
+# Verify: simulation completes without error, runtime printed, conservation holds.
+scenario_id: vitap-scale-500
+campus_id: vitap
+name: SCALE_500
+description: "Scalability test: 500 vehicles, E1 arrival shape, 600-min run. Verify runtime and conservation."
+duration_minutes: 600
+vehicle_count: 500
+start_time_min: 480
+
+arrival_rate_profile:
+  type: profile
+  points:
+    - { time: 0,   rate: 0.3 }
+    - { time: 60,  rate: 1.2 }
+    - { time: 120, rate: 0.8 }
+    - { time: 240, rate: 0.6 }
+    - { time: 360, rate: 0.9 }
+    - { time: 480, rate: 0.4 }
+    - { time: 540, rate: 0.2 }
+    - { time: 600, rate: 0.1 }
+
+event_conditions: null
+
+availability_overrides:
+  closed_gates: []
+  closed_parking_lots: []
+  closed_roads: []
+
+prediction_error_injection_level: 0.0
+random_seed: 7
+warmdown_minutes: 30
+use_prediction: true
+use_optimization: true
+use_uncertainty: true
+proactive: true

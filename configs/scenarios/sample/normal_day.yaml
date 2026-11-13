@@ -1,0 +1,16 @@
+# SYNTHETIC starter scenario. Not a measured description of real campus behavior.
+scenario_id: sample-normal-day
+campus_id: sample
+name: NORMAL_DAY
+duration_minutes: 120
+vehicle_count: 30
+arrival_rate_profile:
+  type: constant
+  rate: 0.25   # vehicles per minute
+event_conditions: null
+availability_overrides:
+  closed_gates: []
+  closed_parking_lots: []
+  closed_roads: []
+prediction_error_injection_level: 0.0
+random_seed: 1

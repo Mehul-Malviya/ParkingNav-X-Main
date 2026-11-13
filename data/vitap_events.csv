@@ -1,0 +1,11 @@
+event_id,event_type,name,start_time,end_time,expected_demand_multiplier,affected_zones,status
+EVT001,placement,Semester Commencement,2025-07-14T08:00:00,2025-07-14T10:00:00,1.8,"[""academic_zone"",""admin_zone""]",completed
+EVT002,placement,Mid-Semester Examinations,2025-09-08T09:00:00,2025-09-19T17:00:00,1.5,"[""academic_zone""]",completed
+EVT003,sports,Inter-College Cricket Tournament,2025-10-03T08:00:00,2025-10-05T18:00:00,1.6,"[""sports_zone""]",completed
+EVT004,other,TechFest 2025,2025-10-17T09:00:00,2025-10-19T21:00:00,2.0,"[""academic_zone"",""admin_zone"",""sports_zone""]",completed
+EVT005,placement,End-Semester Examinations,2025-11-17T09:00:00,2025-11-28T17:00:00,1.4,"[""academic_zone""]",scheduled
+EVT006,graduation,Convocation Ceremony,2025-12-06T09:00:00,2025-12-06T14:00:00,2.2,"[""academic_zone"",""admin_zone""]",scheduled
+EVT007,sports,Annual Sports Meet,2026-09-05T07:00:00,2026-09-06T18:00:00,1.7,"[""sports_zone"",""overflow_zone""]",completed
+EVT008,other,Freshers Day,2026-08-29T10:00:00,2026-08-29T20:00:00,1.5,"[""academic_zone""]",completed
+EVT009,placement,Research Symposium,2026-09-19T09:00:00,2026-09-20T17:00:00,1.3,"[""academic_zone"",""admin_zone""]",completed
+EVT010,other,Farewell Ceremony,2026-07-25T10:00:00,2026-07-25T16:00:00,1.4,"[""academic_zone"",""hostel_zone""]",completed

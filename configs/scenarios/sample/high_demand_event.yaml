@@ -1,0 +1,22 @@
+﻿# SYNTHETIC starter scenario, referencing a real EVENTS row (sample-event-1
+# in configs/campus/sample.yaml). The demand_multiplier there is an
+# explicitly-labeled ASSUMPTION field, not a measured fact.
+scenario_id: sample-high-demand-event
+campus_id: sample
+name: HIGH_DEMAND_EVENT
+duration_minutes: 120
+vehicle_count: 30
+arrival_rate_profile:
+  type: profile
+  points:
+    - { time: 0, rate: 0.2 }
+    - { time: 30, rate: 0.8 }
+    - { time: 90, rate: 0.3 }
+event_conditions:
+  event_id: sample-event-1
+availability_overrides:
+  closed_gates: []
+  closed_parking_lots: []
+  closed_roads: []
+prediction_error_injection_level: 0.0
+random_seed: 2

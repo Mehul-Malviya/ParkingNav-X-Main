@@ -1,0 +1,76 @@
+# VIT-AP map calibration spec — input to scripts/calibrate_campus_from_osm.py
+# ===========================================================================
+# The ONLY places a coordinate may come from:
+#   exact        -> an OpenStreetMap way in data/osm/vitap_osm_extract.json (ODbL)
+#   approximate  -> a pixel position read from the reference map image, converted
+#                   with an affine transform FITTED to the control points below.
+# Nothing here is typed as lat/lng. configs/campus/vitap.yaml (the runtime source
+# of truth) is generated from this spec + the OSM extract; do not hand-edit its
+# coordinates or road geometry — change this file and re-run the script.
+
+reference_image: "campus_graph_vitap(3).png (user-supplied OSM-style render; not committed)"
+# Pixel positions below were read by eye from that image (marker centres): expect ~±3 px.
+approximate_accuracy_m: 25      # image-derived points: treat as ±20–25 m, NOT surveyed
+max_control_loo_error_m: 5      # script aborts if leave-one-out error of the fit exceeds this
+
+# Buildings that are exact in OSM AND visible in the reference image. They fit the
+# pixel -> lat/lng transform. Their positions are never overwritten by the fit.
+control_points:
+  vitap-osm-750542242:  {pixel: [755, 421]}    # AB-2
+  vitap-osm-1485919486: {pixel: [1308, 409]}   # AB-1
+  vitap-osm-1255690439: {pixel: [1023, 710]}   # CB
+  vitap-osm-1434460208: {pixel: [1337, 757]}   # MH-1
+  vitap-osm-1321555307: {pixel: [843, 856]}    # Food Street
+  vitap-osm-1434460210: {pixel: [1494, 906]}   # MH-2
+  vitap-osm-1485935404: {pixel: [1300, 1109]}  # MH-7
+  vitap-osm-1434460214: {pixel: [1509, 1240]}  # MH-3
+  vitap-osm-1434890457: {pixel: [1151, 1270]}  # MH-6
+  vitap-osm-1485935405: {pixel: [467, 1274]}   # LH-1
+
+# Exact OSM positions (vertex-mean centroid of the way, as in the original config).
+exact:
+  vitap-osm-1485919486: 1485919486   # AB-1
+  vitap-osm-750542242:  750542242    # AB-2
+  vitap-osm-1255690439: 1255690439   # CB
+  vitap-osm-1321555307: 1321555307   # Food Street
+  vitap-osm-1434460208: 1434460208   # MH-1
+  vitap-osm-1434908865: 1434908865   # MH-2 Food Store
+  vitap-osm-1434460210: 1434460210   # MH-2
+  vitap-osm-1485935404: 1485935404   # MH-7
+  vitap-osm-1434460214: 1434460214   # MH-3
+  vitap-osm-1434890457: 1434890457   # MH-6
+  vitap-osm-1485935405: 1485935405   # LH-1
+
+# Exact OSM multipolygon buildings (name/tags are on the relation; geometry in its outer/inner
+# ways). Node position = area-weighted centroid of (outer - inner); the path ends at the outer wall.
+exact_relations:
+  vitap-osm-mh5-001: 20292102   # MH-5
+  vitap-osm-mh4-001: 20292198   # MH-4   (was image-calibrated, now exact)
+  vitap-osm-lh2-001: 20292199   # LH-2   (was image-calibrated, now exact)
+  vitap-osm-lh3-001: 20292200   # LH-3   (new destination)
+
+# Parking lots with a real OSM footprint. Node position = area-weighted centroid of the
+# polygons; boundary = the polygons themselves.
+exact_parking:
+  vitap-lot-overflow: [1485919489, 1485919490]
+
+# Image-calibrated (approximate). Not verifiable against OSM, which has no gate/lot tags.
+approximate:
+  vitap-gate-main:         {pixel: [1027, 107]}
+  vitap-gate-visitor:      {pixel: [1553, 704]}
+  vitap-lot-admin-visitor: {pixel: [1395, 567]}
+  vitap-lot-academic-main: {pixel: [1273, 667]}
+  vitap-lot-sports:        {pixel: [215, 1018]}   # the labelled marker; Sports Triangle 2 pitch is ~13 m away in OSM
+  vitap-lot-hostel:        {pixel: [1380, 977]}
+  vitap-lib-001:           {pixel: [1088, 777]}   # Library
+  vitap-gym-001:           {pixel: [736, 624]}    # Sports Complex (OSM 'Paid Gym'/badminton courts ~15 m away)
+
+# Destinations with no reference coordinates that may stay UNPLACED (no coordinates, not drawn,
+# kept in the graph/DB so seeded simulations are unchanged). Currently none.
+unconfigured: {}
+
+# Destinations REMOVED from the campus entirely (config, roads, edges, DB, API, UI), on request.
+# NOTE: the seeded simulation draws vehicle destinations from the destinations table, so removing
+# one shifts every seeded result relative to the committed experiments.
+removed:
+  vitap-osm-ap2-001: "AP-2: removed on request (no reference coordinates; not in OSM)"

@@ -1,0 +1,46 @@
+# E3: Parking lot closure — academic-main closed ticks 60–180 (09:00–11:00)
+# Tests: overflow response, diversion to hostel/admin-visitor/overflow during closure,
+#        inflow resumes after tick 180, vehicles in transit at tick 60 cruise to next lot.
+# Same base as E1 (600-min, 400-vehicle, E1 profile); only difference is timed lot closure.
+scenario_id: vitap-lot-closure
+campus_id: vitap
+name: LOT_CLOSURE
+description: "Academic-main lot closed ticks 60-180 (09:00-11:00); vehicles diverted during closure"
+duration_minutes: 600
+vehicle_count: 400
+start_time_min: 480
+
+arrival_rate_profile:
+  type: profile
+  points:
+    - { time: 0,   rate: 0.3 }
+    - { time: 60,  rate: 1.2 }
+    - { time: 120, rate: 0.8 }
+    - { time: 240, rate: 0.6 }
+    - { time: 360, rate: 0.9 }
+    - { time: 480, rate: 0.4 }
+    - { time: 540, rate: 0.2 }
+    - { time: 600, rate: 0.1 }
+
+event_conditions: null
+
+availability_overrides:
+  closed_gates: []
+  closed_parking_lots: []
+  closed_roads: []
+  timed_closures:
+    - entity_type: parking_lot
+      entity_id: vitap-lot-academic-main
+      start_tick: 60    # 09:00 (start_time_min=480 → tick 60 = 08:00+60min = 09:00)
+      end_tick: 180     # 11:00
+
+prediction_error_injection_level: 0.0
+random_seed: 43
+warmdown_minutes: 30
+
+# use_prediction / use_optimization / use_uncertainty / proactive are not yet
+# read by the engine (pending Member 3). Set here for forward compatibility.
+use_prediction: true
+use_optimization: true
+use_uncertainty: true
+proactive: true

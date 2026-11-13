@@ -1,0 +1,117 @@
+# SAMPLE campus config — fabricated development placeholder. Never real.
+campus:
+  campus_id: sample
+  name: Sample Campus
+  description: Fully fabricated development/test campus.
+  timezone: UTC
+  configuration_version: SAMPLE_CONFIG_V1
+
+gates:
+  - gate_id: sample-gate-1
+    name: Sample Gate 1
+    latitude: 10.0000
+    longitude: 20.0000
+    capacity: 10
+    status: open
+
+parking_lots:
+  - parking_lot_id: sample-lot-1
+    name: Sample Lot 1
+    latitude: 10.0010
+    longitude: 20.0010
+    total_capacity: 20
+    usable_capacity: 18
+    status: open
+  - parking_lot_id: sample-lot-2
+    name: Sample Lot 2
+    latitude: 10.0020
+    longitude: 20.0005
+    total_capacity: 15
+    usable_capacity: 15
+    status: open
+
+destinations:
+  - destination_id: sample-dest-1
+    name: Sample Destination 1
+    category: academic_block
+    latitude: 10.0015
+    longitude: 20.0020
+    nearest_gate_ids: [sample-gate-1]
+    nearest_parking_lot_ids: [sample-lot-1, sample-lot-2]
+
+events:
+  - event_id: sample-event-1
+    event_type: exam
+    name: Sample Exam Week
+    start_time: "2026-10-01T00:00:00Z"
+    end_time: "2026-10-05T00:00:00Z"
+    expected_demand_multiplier: 1.5
+    affected_zones: [sample-lot-1]
+    status: scheduled
+
+roads:
+  - road_id: sample-road-1
+    name: Gate to Lot 1
+    start_node_id: sample-gate-1
+    end_node_id: sample-lot-1
+    length_meters: 120
+    expected_travel_time_seconds: 90
+    is_walkable: true
+    is_driveable: true
+    status: open
+    geometry:
+      - { lat: 10.0000, lng: 20.0000 }
+      - { lat: 10.0005, lng: 20.0005 }
+      - { lat: 10.0010, lng: 20.0010 }
+  - road_id: sample-road-2
+    name: Gate to Lot 2
+    start_node_id: sample-gate-1
+    end_node_id: sample-lot-2
+    length_meters: 150
+    expected_travel_time_seconds: 110
+    is_walkable: true
+    is_driveable: true
+    status: open
+    geometry:
+      - { lat: 10.0000, lng: 20.0000 }
+      - { lat: 10.0010, lng: 20.0003 }
+      - { lat: 10.0020, lng: 20.0005 }
+  - road_id: sample-road-3
+    name: Lot 1 to Destination 1
+    start_node_id: sample-lot-1
+    end_node_id: sample-dest-1
+    length_meters: 60
+    expected_travel_time_seconds: 45
+    is_walkable: true
+    is_driveable: false
+    status: open
+    geometry:
+      - { lat: 10.0010, lng: 20.0010 }
+      - { lat: 10.0013, lng: 20.0015 }
+      - { lat: 10.0015, lng: 20.0020 }
+
+edges:
+  - from_node_id: sample-gate-1
+    to_node_id: sample-lot-1
+    road_id: sample-road-1
+    weight_time_seconds: 90
+    weight_distance_meters: 120
+    is_walkable: true
+    is_driveable: true
+    status: open
+  - from_node_id: sample-gate-1
+    to_node_id: sample-lot-2
+    road_id: sample-road-2
+    weight_time_seconds: 110
+    weight_distance_meters: 150
+    is_walkable: true
+    is_driveable: true
+    status: open
+  - from_node_id: sample-lot-1
+    to_node_id: sample-dest-1
+    road_id: sample-road-3
+    weight_time_seconds: 45
+    weight_distance_meters: 60
+    is_walkable: true
+    is_driveable: false
+    status: open
