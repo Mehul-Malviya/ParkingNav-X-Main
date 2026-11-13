@@ -1,0 +1,57 @@
+{
+  "forecast_horizon_minutes": 30,
+  "source": "XGBoost occupancy model",
+  "note": "Preliminary forecasts from synthetic observations. Occupancy ratios above 1 are retained to represent overflow. Available spaces may be negative when overflow is predicted. These are parking forecasts, not road congestion predictions.",
+  "parking_lots": [
+    {
+      "parking_lot_id": "vitap-lot-overflow",
+      "source_timestamp": "2024-09-14 17:00:00+00:00",
+      "forecast_timestamp": "2024-09-14 17:30:00+00:00",
+      "capacity": 60.0,
+      "current_occupancy_ratio": 0.05,
+      "predicted_occupancy_ratio": 0.5783721804618835,
+      "predicted_occupied_spaces": 34.7,
+      "predicted_available_spaces": 25.3
+    },
+    {
+      "parking_lot_id": "vitap-lot-admin-visitor",
+      "source_timestamp": "2025-05-24 13:30:00+00:00",
+      "forecast_timestamp": "2025-05-24 14:00:00+00:00",
+      "capacity": 60.0,
+      "current_occupancy_ratio": 0.13333333333333333,
+      "predicted_occupancy_ratio": 0.13984932005405426,
+      "predicted_occupied_spaces": 8.39,
+      "predicted_available_spaces": 51.61
+    },
+    {
+      "parking_lot_id": "vitap-lot-hostel",
+      "source_timestamp": "2026-02-11 16:00:00+00:00",
+      "forecast_timestamp": "2026-02-11 16:30:00+00:00",
+      "capacity": 80.0,
+      "current_occupancy_ratio": 0.025,
+      "predicted_occupancy_ratio": 0.0441625602543354,
+      "predicted_occupied_spaces": 3.53,
+      "predicted_available_spaces": 76.47
+    },
+    {
+      "parking_lot_id": "vitap-lot-academic-main",
+      "source_timestamp": "2026-03-14 18:00:00+00:00",
+      "forecast_timestamp": "2026-03-14 18:30:00+00:00",
+      "capacity": 120.0,
+      "current_occupancy_ratio": 0.03333333333333333,
+      "predicted_occupancy_ratio": 0.05950767546892166,
+      "predicted_occupied_spaces": 7.14,
+      "predicted_available_spaces": 112.86
+    },
+    {
+      "parking_lot_id": "vitap-lot-sports",
+      "source_timestamp": "2026-09-12 17:30:00+00:00",
+      "forecast_timestamp": "2026-09-12 18:00:00+00:00",
+      "capacity": 100.0,
+      "current_occupancy_ratio": 0.05,
+      "predicted_occupancy_ratio": 0.07109671086072922,
+      "predicted_occupied_spaces": 7.11,
+      "predicted_available_spaces": 92.89
+    }
+  ]
+}

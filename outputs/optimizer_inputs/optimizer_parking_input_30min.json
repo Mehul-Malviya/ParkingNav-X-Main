@@ -1,0 +1,22 @@
+{
+  "vitap-lot-overflow": {
+    "capacity": 60,
+    "occupied": 35
+  },
+  "vitap-lot-admin-visitor": {
+    "capacity": 60,
+    "occupied": 8
+  },
+  "vitap-lot-hostel": {
+    "capacity": 80,
+    "occupied": 4
+  },
+  "vitap-lot-academic-main": {
+    "capacity": 120,
+    "occupied": 7
+  },
+  "vitap-lot-sports": {
+    "capacity": 100,
+    "occupied": 7
+  }
+}

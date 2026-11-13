@@ -1,0 +1,14 @@
+{
+  "ParkingA": {
+    "capacity": 100,
+    "occupied": 45
+  },
+  "ParkingB": {
+    "capacity": 80,
+    "occupied": 72
+  },
+  "ParkingC": {
+    "capacity": 60,
+    "occupied": 30
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "status": "PRELIMINARY_TEST_INPUT_NOT_LIVE",
+  "source": "Synthetic observations and trained XGBoost occupancy model",
+  "warning": "Parking lots use different source timestamps. Do not treat these values as a simultaneous campus snapshot. Road congestion predictions remain separate.",
+  "forecast_horizon_minutes": 15,
+  "lots": [
+    {
+      "parking_lot_id": "vitap-lot-overflow",
+      "source_timestamp": "2024-09-14 17:00:00+00:00",
+      "forecast_timestamp": "2024-09-14 17:15:00+00:00"
+    },
+    {
+      "parking_lot_id": "vitap-lot-admin-visitor",
+      "source_timestamp": "2025-05-24 13:30:00+00:00",
+      "forecast_timestamp": "2025-05-24 13:45:00+00:00"
+    },
+    {
+      "parking_lot_id": "vitap-lot-hostel",
+      "source_timestamp": "2026-02-11 16:00:00+00:00",
+      "forecast_timestamp": "2026-02-11 16:15:00+00:00"
+    },
+    {
+      "parking_lot_id": "vitap-lot-academic-main",
+      "source_timestamp": "2026-03-14 18:00:00+00:00",
+      "forecast_timestamp": "2026-03-14 18:15:00+00:00"
+    },
+    {
+      "parking_lot_id": "vitap-lot-sports",
+      "source_timestamp": "2026-09-12 17:30:00+00:00",
+      "forecast_timestamp": "2026-09-12 17:45:00+00:00"
+    }
+  ]
+}

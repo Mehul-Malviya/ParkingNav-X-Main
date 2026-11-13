@@ -1,0 +1,36 @@
+{
+  "Gate1": {
+    "RoadA": 2,
+    "RoadB": 5
+  },
+  "RoadA": {
+    "Gate1": 2,
+    "RoadC": 3,
+    "RoadD": 4
+  },
+  "RoadB": {
+    "Gate1": 5,
+    "RoadD": 2
+  },
+  "RoadC": {
+    "RoadA": 3,
+    "ParkingA": 4,
+    "ParkingB": 6
+  },
+  "RoadD": {
+    "RoadA": 4,
+    "RoadB": 2,
+    "ParkingB": 3,
+    "ParkingC": 5
+  },
+  "ParkingA": {
+    "RoadC": 4
+  },
+  "ParkingB": {
+    "RoadC": 6,
+    "RoadD": 3
+  },
+  "ParkingC": {
+    "RoadD": 5
+  }
+}

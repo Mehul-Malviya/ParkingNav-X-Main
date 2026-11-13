@@ -1,0 +1,16 @@
+parking_lot_id,model,MAE,test_rows
+vitap-lot-academic-main,Persistence baseline,0.11488095238095239,14
+vitap-lot-academic-main,Random Forest,0.03398254466147492,14
+vitap-lot-academic-main,XGBoost,0.04512805058842614,14
+vitap-lot-admin-visitor,Persistence baseline,0.15454545454545454,11
+vitap-lot-admin-visitor,Random Forest,0.03159397923077448,11
+vitap-lot-admin-visitor,XGBoost,0.04177345588351741,11
+vitap-lot-hostel,Persistence baseline,0.09583333333333334,3
+vitap-lot-hostel,Random Forest,0.09701040302144769,3
+vitap-lot-hostel,XGBoost,0.0603788450360298,3
+vitap-lot-overflow,Persistence baseline,0.41041666666666665,16
+vitap-lot-overflow,Random Forest,0.6227782105428552,16
+vitap-lot-overflow,XGBoost,0.6463762884338697,16
+vitap-lot-sports,Persistence baseline,0.155,26
+vitap-lot-sports,Random Forest,0.09482125982883213,26
+vitap-lot-sports,XGBoost,0.08833258333114477,26

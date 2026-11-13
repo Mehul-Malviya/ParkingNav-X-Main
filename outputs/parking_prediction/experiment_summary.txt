@@ -1,0 +1,26 @@
+PARKINGNAV-X: OCCUPANCY PREDICTION EXPERIMENT
+
+Dataset:
+- Total observations: 294
+- Parking lots: 5
+- Valid 15-minute targets: 204
+- Training observations: 142
+- Test observations: 62
+- Data is synthetic; results are preliminary.
+
+Models evaluated:
+- Persistence baseline: MAE 0.1624, RMSE 0.3293
+- XGBoost: MAE 0.2471, RMSE 0.5087
+- Random Forest: MAE 0.2908, RMSE 0.5313
+
+Conclusion:
+The persistence baseline outperformed both machine-learning models
+on the current test set. XGBoost performed better than Random Forest.
+Overflow observations are sparse and concentrated on one date,
+so overflow-specific model results cannot yet be reliably established.
+
+Next steps:
+- Improve data coverage and temporal consistency.
+- Investigate prediction errors.
+- Re-evaluate using a suitable chronological test period.
+- Avoid claiming real-world performance until validated on real data.
