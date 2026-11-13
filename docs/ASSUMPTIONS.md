@@ -1,0 +1,95 @@
+# ParkingNav-X — Configurable Assumptions
+
+**Status:** Academic prototype. All parameters below are configurable estimates unless marked as measured.  
+**Last updated:** 2026-10-26
+
+---
+
+## How to replace an assumption with real data
+
+1. Edit `configs/campus/vitap.yaml` for campus structure parameters.
+2. Edit the relevant scenario YAML in `configs/scenarios/vitap/` for demand parameters.
+3. Replace `data/synthetic_demand.csv` with real sensor observations matching the same schema
+   (`timestamp`, `lot_id`, `occupied_spaces`, `event_type`, `event_intensity`).
+4. Re-run `python -m pytest tests/ -q` to confirm no invariants are broken.
+5. Re-run `python scripts/run_all_experiments.py --seeds 10` to regenerate results.
+
+---
+
+## Campus structure (vitap.yaml)
+
+| Parameter | Current value | Source | How to replace |
+|-----------|--------------|--------|----------------|
+| Academic Main Lot capacity | 120 spaces | Estimated from campus map | Count actual marked bays |
+| Hostel Zone Lot capacity | 180 spaces | Estimated from campus map | Count actual marked bays |
+| Admin/Visitor Lot capacity | 80 spaces | Estimated from campus map | Count actual marked bays |
+| Sports Complex Lot capacity | 100 spaces | Estimated from campus map | Count actual marked bays |
+| Overflow Lot capacity | 60 spaces | Estimated from campus map | Count actual marked bays |
+| Reserved/accessible spaces | 5% of usable per lot | Estimated (regulatory minimum) | Check campus accessibility policy |
+| Main Gate service rate | 6 vehicles/min | Estimated (M/M/c assumption) | Measure peak-hour gate throughput |
+| Visitor Gate service rate | 3 vehicles/min | Estimated | Measure peak-hour gate throughput |
+| Road segment travel times | BPR function of distance | BPR model (literature) | Measure with GPS traces |
+| BPR alpha | 0.15 | Standard BPR literature default | Calibrate from traffic counts |
+| BPR beta | 4.0 | Standard BPR literature default | Calibrate from traffic counts |
+
+---
+
+## Demand and arrival (scenario YAMLs)
+
+| Parameter | Default (E1 normal day) | Source | How to replace |
+|-----------|------------------------|--------|----------------|
+| Total daily vehicles | 300 | Estimated (VIT-AP ~8,000 students + staff) | Count gate entries over one week |
+| Arrival profile | Lognormal peaks at 8:30 and 13:30 | Estimated (typical academic schedule) | Fit to real gate count time series |
+| Destination distribution | Academic 50%, Hostel 25%, Admin 10%, Sports 10%, Other 5% | Estimated | Survey students on destination |
+| Event intensity multiplier (E2) | 2.0× normal arrival rate | Estimated | Measure during placement drives |
+| Vehicle dwell time | Lognormal(mean=4h, σ=1.5h) | Estimated (academic parking literature) | Measure from CCTV exit logs |
+| Simulation duration | 600 minutes (10 hours) | Design decision | Adjust to cover real operating hours |
+
+---
+
+## Prediction model
+
+| Parameter | Current value | Source | How to replace |
+|-----------|--------------|--------|----------------|
+| Forecast horizon | 15 minutes | Design decision | Any horizon supported by retraining |
+| XGBoost n_estimators | 200 | Default; not tuned on test data | Cross-validate on held-out real data |
+| XGBoost max_depth | 6 | Default | Cross-validate |
+| Conformal calibration set | 15% of synthetic data | Design decision | Use real held-out observations |
+| Training data | `data/synthetic_demand.csv` (14,400 rows, synthetic) | **SYNTHETIC** — generated from demand model | Replace with real sensor CSV |
+| Min samples for evaluation | 50 per lot | Code threshold in `features.py` | Lower only if data is verified |
+
+---
+
+## Risk engine
+
+| Parameter | Current value | Source | How to replace |
+|-----------|--------------|--------|----------------|
+| Overflow risk threshold | 90% fill rate | Design decision | Calibrate from operational data |
+| Gate queue risk threshold | 20 vehicles | Design decision | Measure acceptable queue at real gates |
+| Proactive trigger | Forecast ≥ 90% AND current < 90% | Design decision (hysteresis) | Adjust based on observed response lag |
+| Risk sigmoid steepness | 10.0 | Tuned for interpretable output | Leave unless risk scores are unintuitive |
+
+---
+
+## Optimization
+
+| Parameter | Current value | Source | How to replace |
+|-----------|--------------|--------|----------------|
+| Weight profile P1 (default) | w1=0.4, w2=0.3, w3=0.2, w4=0.05, w5=0.05 | Design decision (waiting-time priority) | Tune on development seeds only |
+| Weight profile P2 (balanced) | 0.2 each | Design decision | — |
+| Weight profile P3 (overflow) | w5=0.5, others lower | Design decision | — |
+| Recommendation score threshold | < 0.70 = recommended | Design decision | Adjust based on operational tolerance |
+
+---
+
+## Privacy and data collection
+
+No personal data is collected or stored. See `docs/DATA_PROTECTION.md`.
+
+---
+
+## Citation / data provenance note
+
+All occupancy data used for training and evaluation is **synthetic**, generated by `digital_twin/prediction/features.py::_generate_synthetic_data()` using a structured demand model (hour-of-day curve × weekday factor × optional event spike). It is explicitly labelled `data_source=synthetic_generated` in the CSV.
+
+No real VIT-AP sensor, CCTV, ANPR, or gate-count data was used in model training. Any comparison to real campus conditions is qualitative and should be labelled as a simulation-based estimate.
