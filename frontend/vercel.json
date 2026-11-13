@@ -1,6 +1,6 @@
 {
   "rewrites": [
-    { "source": "/api/:path*", "destination": "https://parkingnav-api.onrender.com/:path*" },
+    { "source": "/api/:path*", "destination": "https://parkingnav-x-main.onrender.com/:path*" },
     { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
