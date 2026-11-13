@@ -89,21 +89,33 @@ ok(f"Campus loaded: {len(gates)} gates, {len(lots)} lots, {len(roads)} roads, {l
 section("PROOF 2 - Digital Twin State Engine (M2: State Manager)")
 # ------------------------------------------------------------------------------
 
-from digital_twin.twin_service import DigitalTwinService  # noqa: E402
+from digital_twin.twin_service import DigitalTwinService
 
-twin = DigitalTwinService(conn)
-state = twin.get_state("vitap")
+twin = DigitalTwinService()
+state = twin.get_current_state("vitap", conn)
 
 print("\n  Live Digital Twin State Snapshot:")
 print(f"  {'Campus ID':<30} : {state.get('campus_id', 'vitap')}")
-print(f"  {'Active parking lots':<30} : {len(state.get('parking_lots', {}))}")
-print(f"  {'Active gates':<30} : {len(state.get('gates', {}))}")
-print(f"  {'Timestamp':<30} : {state.get('timestamp', 'live')}")
+print(f"  {'Active parking lots':<30} : {len(state.get('parking', []))}")
+print(f"  {'Active gates':<30} : {len(state.get('gates', []))}")
+print(f"  {'Timestamp':<30} : Current database state")
 
-for lot_id, lot in list(state.get('parking_lots', {}).items())[:3]:
-    occ  = lot.get('occupied_spaces', 0)
-    cap  = lot.get('usable_capacity', 0)
-    fill = f"{occ}/{cap} ({round(occ/cap*100) if cap else 0}%)"
+for lot in state.get('parking', [])[:3]:
+    lot_id = lot.get('parking_lot_id')
+    occ = lot.get('occupied_spaces', 0)
+
+    capacity_row = conn.execute(
+        """
+        SELECT usable_capacity
+        FROM parking_lots
+        WHERE campus_id = ? AND parking_lot_id = ?
+        """,
+        ("vitap", lot_id)
+    ).fetchone()
+
+    cap = capacity_row["usable_capacity"] if capacity_row else 0
+    fill = f"{occ}/{cap} ({round(occ / cap * 100) if cap else 0}%)"
+
     print(f"    {lot_id:<25} occupied={fill}")
 
 ok("Digital Twin state engine is live and returning dynamic campus state")
@@ -142,7 +154,7 @@ EXPERIMENTS = [
     ("E3", "E3_lot_closure",     "Parking lot closure disruption"),
     ("E4", "E4_gate_closure",    "Gate closure disruption"),
     ("E5", "E5_noise_0",         "Prediction error robustness (0%)"),
-    ("E6", "peak_hour",          "Peak hour stress test"),
+    ("E6", "S2_peak_hour",          "Peak hour stress test"),
     ("E7", "E7_replay",          "Counterfactual replay"),
 ]
 
@@ -178,7 +190,16 @@ for exp_id, scenario_name, description in EXPERIMENTS:
     p_s   = round(row["P"]["avg_search_time_min"], 2)
     print(f"  {exp_id:<5} {scenario_name:<28} {str(b1_ov):>12} {str(p_ov):>12} {str(b1_s):>12} {str(p_s):>12}")
 
-ok("All experiments executed and saved to runs/")
+expected_experiments = len(EXPERIMENTS)
+completed_experiments = len(all_results)
+
+if completed_experiments == expected_experiments:
+    ok(f"All {completed_experiments} experiments executed and saved to runs/")
+else:
+    print(
+        f"  [WARNING] Only {completed_experiments}/{expected_experiments} "
+        "experiments completed."
+    )
 
 
 # ------------------------------------------------------------------------------
@@ -195,7 +216,7 @@ print("""
   Peak-hour scenario results:
 """)
 
-sc_peak = ScenarioLoader.load(ROOT / "configs/scenarios/vitap/peak_hour.yaml")
+sc_peak = ScenarioLoader.load(ROOT / "configs/scenarios/vitap/S2_peak_hour.yaml")
 peak_results = {}
 for code, strat in STRATEGIES.items():
     r = engine.run(sc_peak, strat, conn, run_id=f"proof-peak-{code}-{uuid.uuid4().hex[:4]}")
@@ -210,9 +231,24 @@ for code in ["B1","B2","B3","P"]:
 
 b1_ov = peak_results["B1"]["overflow_events_count"]
 p_ov  = peak_results["P"]["overflow_events_count"]
-improvement = round((b1_ov - p_ov) / b1_ov * 100) if b1_ov > 0 else 100
-print(f"\n  Overflow improvement B1 -> P : {b1_ov} -> {p_ov}  ({improvement}% reduction)")
-ok("ParkingNav-X outperforms all baselines - hypothesis H1 supported")
+if b1_ov > 0:
+    improvement = round((b1_ov - p_ov) / b1_ov * 100)
+    print(
+        f"\n  Overflow improvement B1 -> P : "
+        f"{b1_ov} -> {p_ov} ({improvement}% reduction)"
+    )
+else:
+    print(
+        f"\n  Overflow comparison: B1={b1_ov}, P={p_ov}. "
+        "No overflow observed for either strategy."
+    )
+
+if peak_results["P"]["avg_search_time_min"] < peak_results["B1"]["avg_search_time_min"]:
+    ok("ParkingNav-X reduced search time compared with B1 in this scenario")
+else:
+    print("  [INFO] ParkingNav-X did not reduce search time compared with B1.")
+
+print("  [INFO] Compare all four strategy metrics before drawing performance conclusions.")
 
 
 # ------------------------------------------------------------------------------
