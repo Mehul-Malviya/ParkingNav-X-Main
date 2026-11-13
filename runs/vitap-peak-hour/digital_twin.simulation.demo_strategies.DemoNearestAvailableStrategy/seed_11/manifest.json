@@ -1,0 +1,10 @@
+{
+  "scenario_id": "vitap-peak-hour",
+  "strategy_name": "digital_twin.simulation.demo_strategies.DemoNearestAvailableStrategy",
+  "random_seed": 11,
+  "config_hash": "e0adfaa2",
+  "git_commit": "59c088ffb7bbed50bf315c7feb3da2c53eb924bd",
+  "recorded_at": "2026-10-10T07:03:46.760681+00:00",
+  "vehicle_count": 350,
+  "timestep_count": 120
+}

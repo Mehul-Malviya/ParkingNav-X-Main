@@ -1,0 +1,10 @@
+{
+  "scenario_id": "vitap-normal-day",
+  "strategy_name": "digital_twin.simulation.demo_strategies.ParkingNavXFullStrategy",
+  "random_seed": 7,
+  "config_hash": "e0adfaa2",
+  "git_commit": "59c088ffb7bbed50bf315c7feb3da2c53eb924bd",
+  "recorded_at": "2026-10-10T07:20:13.067766+00:00",
+  "vehicle_count": 400,
+  "timestep_count": 600
+}

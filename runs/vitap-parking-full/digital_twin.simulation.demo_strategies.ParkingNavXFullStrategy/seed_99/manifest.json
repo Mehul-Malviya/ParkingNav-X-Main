@@ -1,0 +1,10 @@
+{
+  "scenario_id": "vitap-parking-full",
+  "strategy_name": "digital_twin.simulation.demo_strategies.ParkingNavXFullStrategy",
+  "random_seed": 99,
+  "config_hash": "e0adfaa2",
+  "git_commit": "59c088ffb7bbed50bf315c7feb3da2c53eb924bd",
+  "recorded_at": "2026-10-10T07:07:20.621053+00:00",
+  "vehicle_count": 600,
+  "timestep_count": 90
+}

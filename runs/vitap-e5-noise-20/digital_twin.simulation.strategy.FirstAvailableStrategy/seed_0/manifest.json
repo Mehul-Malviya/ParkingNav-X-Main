@@ -1,0 +1,10 @@
+{
+  "scenario_id": "vitap-e5-noise-20",
+  "strategy_name": "digital_twin.simulation.strategy.FirstAvailableStrategy",
+  "random_seed": 0,
+  "config_hash": "e0adfaa2",
+  "git_commit": "59c088ffb7bbed50bf315c7feb3da2c53eb924bd",
+  "recorded_at": "2026-10-10T07:59:35.419660+00:00",
+  "vehicle_count": 400,
+  "timestep_count": 600
+}

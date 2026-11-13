@@ -1,0 +1,10 @@
+{
+  "scenario_id": "vitap-gate-closure",
+  "strategy_name": "digital_twin.simulation.demo_strategies.PredictionOnlyStrategy",
+  "random_seed": 44,
+  "config_hash": "e0adfaa2",
+  "git_commit": "59c088ffb7bbed50bf315c7feb3da2c53eb924bd",
+  "recorded_at": "2026-10-10T07:07:40.412752+00:00",
+  "vehicle_count": 400,
+  "timestep_count": 600
+}

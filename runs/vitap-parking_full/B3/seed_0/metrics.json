@@ -1,0 +1,13 @@
+{
+  "avg_search_time_min": 5.428404944812931,
+  "avg_wait_time_min": 8.775,
+  "max_search_time_min": 80.99999999999964,
+  "avg_gate_queue": 8.775,
+  "max_gate_queue": 36.0,
+  "overflow_events_count": 153,
+  "total_vehicles": 600,
+  "completed_vehicles": 55,
+  "parked_vehicles": 468,
+  "infeasibility_rejections": 22,
+  "adapter_fallbacks": 0
+}
