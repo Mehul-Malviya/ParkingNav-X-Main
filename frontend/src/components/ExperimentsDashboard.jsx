@@ -52,7 +52,32 @@ useEffect(() => {
     }
   }
 
+  const loadExistingResults = async () => {
+    try {
+      const sumRes = await api.getExperimentSummary()
+      const summary = sumRes.data
+      if (!summary || Object.keys(summary).length === 0) return
+      const reconstructed = {}
+      Object.values(summary).forEach(item => {
+        if (!item.scenario || !item.strategy) return
+        if (!reconstructed[item.scenario]) reconstructed[item.scenario] = {}
+        const means = {}
+        Object.entries(item.metrics || {}).forEach(([metric, stats]) => {
+          means[metric] = stats.mean ?? null
+        })
+        reconstructed[item.scenario][item.strategy] = means
+      })
+      if (Object.keys(reconstructed).length > 0) {
+        setResults(reconstructed)
+        setSelectedScenario(current =>
+          reconstructed[current] ? current : Object.keys(reconstructed)[0]
+        )
+      }
+    } catch { /* silent — existing results are optional */ }
+  }
+
   loadScenarios()
+  loadExistingResults()
 }, [])
 
   const runExperiments = async () => {
