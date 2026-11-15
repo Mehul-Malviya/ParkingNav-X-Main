@@ -42,7 +42,7 @@ export default function RecommendationPanel() {
   const [recs, setRecs] = useState([])
   const [profile, setProfile] = useState('P1')
   const [profiles, setProfiles] = useState(FALLBACK_PROFILES)
-  const [loading, setLoading] = useState(false)
+  const [loading, setLoading] = useState(true)
   const [lastUpdated, setLastUpdated] = useState(null)
   const [error, setError] = useState('')
 
