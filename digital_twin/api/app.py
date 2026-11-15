@@ -789,6 +789,56 @@ def _data_source_label(prefix: str) -> str:
     return f"[SYNTHETIC] {prefix} synthetic demand data" if d["mode"] == "synthetic" else f"[{d['mode'].upper()}] {prefix} {d['label']}"
 
 
+@app.get("/predict/model-metrics", tags=["Prediction"])
+def get_model_metrics():
+    """Return XGBoost evaluation metrics (MAE, R², 90% CI coverage) from prediction_metrics.json."""
+    import json as _json
+    metrics_file = ROOT / "experiments" / "results" / "prediction_metrics.json"
+    if metrics_file.exists():
+        try:
+            data = _json.loads(metrics_file.read_text())
+            lots = data.get("lots", [])
+            xgb_lots = [l["xgboost"] for l in lots if "xgboost" in l]
+            if xgb_lots:
+                avg_mae = round(sum(l["mae"] for l in xgb_lots) / len(xgb_lots), 4)
+                avg_r2  = round(sum(l["r2"]  for l in xgb_lots) / len(xgb_lots), 4)
+                avg_cov = round(sum(l.get("coverage_90", 0) for l in xgb_lots) / len(xgb_lots), 4)
+                return {
+                    "horizon_minutes": data.get("horizon_minutes", 15),
+                    "summary": {"mae": avg_mae, "r2": avg_r2, "coverage_90": avg_cov,
+                                "n_lots": len(xgb_lots)},
+                    "lots": lots,
+                    "model": "XGBoost + conformal prediction",
+                    "data_source": "experiments/results/prediction_metrics.json",
+                }
+        except Exception:
+            pass
+    return {"summary": {}, "lots": [], "model": "XGBoost", "note": "metrics not yet computed"}
+
+
+@app.get("/data/summary", tags=["Info"])
+def get_data_summary():
+    """Return record counts for all data tables (observations, occupancy snapshots, routes, events)."""
+    conn = get_conn()
+    try:
+        tables = {
+            "parking_observations": "SELECT COUNT(*) FROM parking_observations",
+            "occupancy_snapshots": "SELECT COUNT(*) FROM occupancy_snapshots",
+            "route_cache": "SELECT COUNT(*) FROM route_cache",
+            "campus_events": "SELECT COUNT(*) FROM campus_events",
+        }
+        counts: dict = {}
+        for name, sql in tables.items():
+            try:
+                row = conn.execute(sql).fetchone()
+                counts[name] = row[0] if row else 0
+            except Exception:
+                counts[name] = None
+        return {"status": "ok", "record_counts": counts}
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Data summary failed: {e}")
+
+
 @app.post("/predict/retrain", tags=["Prediction"], dependencies=[Depends(require_write_key)])
 def retrain_predictor():
     """Refit the forecast models on current data: real recorded occupancy for every lot with at least a week
